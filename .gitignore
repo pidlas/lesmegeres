@@ -1,4 +1,7 @@
 *
-!/lesmegeres/
-!/lesmegeres-app/
+!lesmegeres/
+!lesmegeres/**
+!lesmegeres-app/
+!lesmegeres-app/**
 !.gitignore
+lesmegeres/multimedia/

@@ -1,0 +1,71 @@
+<IfModule mod_rewrite.c>
+RewriteEngine On
+
+# --- Mode maintenance -----------------------------------------------------
+# Activer: touch /var/www/lesmegeres/.maintenance
+# Desactiver: rm /var/www/lesmegeres/.maintenance
+RewriteCond %{REQUEST_URI} !^/maintenance/ [NC]
+RewriteCond %{REQUEST_URI} !^/images/favicon/ [NC]
+RewriteCond %{REQUEST_URI} !^/images/logohumous [NC]
+RewriteCond %{DOCUMENT_ROOT}/.maintenance -f
+RewriteRule ^ /maintenance/index.html [R=302,L]
+
+# --- Canonical et legacy --------------------------------------------------
+
+# Canonical home URL
+RewriteCond %{THE_REQUEST} \s/+index\.php[\s?] [NC]
+RewriteRule ^index\.php$ / [R=301,L]
+
+# Redirect legacy page URLs to clean slugs
+RewriteCond %{THE_REQUEST} \s/+pages/([A-Za-z0-9-]+)\.php[\s?] [NC]
+RewriteRule ^pages/([A-Za-z0-9-]+)\.php$ /$1 [R=301,L]
+
+# --- Protection acces -----------------------------------------------------
+
+# Bloquer les dotfiles, sauf .well-known
+RewriteRule (^|/)\.(?!well-known(?:/|$)) - [F,L,NC]
+
+# Defense en profondeur: bloquer includes/archive s'ils reapparaissent
+RewriteRule ^includes/ - [F,L,NC]
+RewriteRule ^archive/ - [F,L,NC]
+
+# --- Front controller -----------------------------------------------------
+
+# Keep existing files and directories accessible
+RewriteCond %{REQUEST_FILENAME} -f [OR]
+RewriteCond %{REQUEST_FILENAME} -d
+RewriteRule ^ - [L]
+
+# Route all public URLs through index.php
+RewriteRule ^ index.php [L,QSA]
+</IfModule>
+
+<IfModule mod_headers.c>
+	# Headers de securite
+	Header always set X-Frame-Options "SAMEORIGIN"
+	Header always set X-Content-Type-Options "nosniff"
+	Header always set Referrer-Policy "strict-origin-when-cross-origin"
+	Header always set Content-Security-Policy "default-src 'self' 'unsafe-inline' 'unsafe-eval' data: blob:; media-src 'self'; object-src 'none'"
+
+	# Cache long pour assets statiques
+	<FilesMatch "\.(css|js|jpg|jpeg|png|gif|svg|ico|woff|woff2|ttf|otf|pdf|mp3|ogg|webp)$">
+		Header set Cache-Control "public, immutable"
+	</FilesMatch>
+</IfModule>
+
+<IfModule mod_expires.c>
+	ExpiresActive On
+	ExpiresByType text/css "access plus 30 days"
+	ExpiresByType application/javascript "access plus 30 days"
+	ExpiresByType image/jpeg "access plus 30 days"
+	ExpiresByType image/png "access plus 30 days"
+	ExpiresByType image/gif "access plus 30 days"
+	ExpiresByType image/svg+xml "access plus 30 days"
+	ExpiresByType image/webp "access plus 30 days"
+	ExpiresByType image/x-icon "access plus 30 days"
+	ExpiresByType font/woff2 "access plus 30 days"
+	ExpiresByType font/woff "access plus 30 days"
+	ExpiresByType application/pdf "access plus 30 days"
+	ExpiresByType audio/mpeg "access plus 30 days"
+	ExpiresByType audio/ogg "access plus 30 days"
+</IfModule>

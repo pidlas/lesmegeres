@@ -1,0 +1,57 @@
+.card[for="c1"] {
+    background-image: url(../images/p_qui-sommes-nous.jpg);
+    background-image: image-set(
+        url(../images/p_qui-sommes-nous.webp) type("image/webp"),
+        url(../images/p_qui-sommes-nous.jpg) type("image/jpeg")
+    );
+    background-position: 50% 22%;
+    background-size: cover;
+}
+
+.card[for="c2"] {
+    background-image: url(../images/p_gresilhette-et-salimonde.jpg);
+    background-image: image-set(
+        url(../images/p_gresilhette-et-salimonde.webp) type("image/webp"),
+        url(../images/p_gresilhette-et-salimonde.jpg) type("image/jpeg")
+    );
+}
+
+.card[for="c3"] {
+    background-image: url(../images/p_ta-grand-mere-sous-le-figuier.jpg);
+    background-image: image-set(
+        url(../images/p_ta-grand-mere-sous-le-figuier.webp) type("image/webp"),
+        url(../images/p_ta-grand-mere-sous-le-figuier.jpg) type("image/jpeg")
+    );
+}
+
+.card[for="c4"] {
+    background-image: url(../images/p_theatre-forum.jpg);
+    background-image: image-set(
+        url(../images/p_theatre-forum.webp) type("image/webp"),
+        url(../images/p_theatre-forum.jpg) type("image/jpeg")
+    );
+}
+
+.card[for="c5"] {
+    background-image: url(../images/p_cours.jpg);
+    background-image: image-set(
+        url(../images/p_cours.webp) type("image/webp"),
+        url(../images/p_cours.jpg) type("image/jpeg")
+    );
+}
+
+.card[for="c6"] {
+    background-image: url(../images/p_stage.jpg);
+    background-image: image-set(
+        url(../images/p_stage.webp) type("image/webp"),
+        url(../images/p_stage.jpg) type("image/jpeg")
+    );
+}
+
+.card[for="c7"] {
+    background-image: url(../images/p_ateliers.jpg);
+    background-image: image-set(
+        url(../images/p_ateliers.webp) type("image/webp"),
+        url(../images/p_ateliers.jpg) type("image/jpeg")
+    );
+}

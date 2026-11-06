@@ -1,0 +1,19 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Watch CSS",
+      "type": "shell",
+      "command": "./scripts/watch-css.sh", // Ajustez le chemin vers votre script si nécessaire
+      "isBackground": true,
+      "presentation": {
+        "reveal": "always",
+        "panel": "dedicated",
+        "group": "watchers"
+      },
+      "runOptions": {
+        "runOn": "folderOpen" // Se lance tout seul à l'ouverture du projet
+      }
+    }
+  ]
+}

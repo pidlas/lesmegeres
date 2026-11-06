@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"><!--autoriser la prise en charge des media queries-->
+        <title>Les Mégères de l'Humus</title>
+        <style>
+            @font-face {
+                font-family: 'Belleza';
+                src: url('fonts/Belleza-Regular.woff2') format('woff2'),
+                     url('fonts/Belleza-Regular.woff') format('woff'),
+                     url('fonts/Belleza-Regular.ttf') format('truetype'),
+                     url('fonts/Belleza-Regular.otf') format('opentype'),
+                     url('fonts/Belleza-Regular.svg') format('svg');
+            }
+            body { font-family: 'Belleza', sans-serif; margin: 0 auto; padding: 0; text-align: center; padding: 9.375rem; }
+            h1 { margin: 0 auto; padding: .625rem 0 0 0; font-size: 50px; }
+            body { background-image: url("bg.jpg"); background-size:cover;margin: 0 auto; padding:1.25rem 170px; color: #333; }
+            article { display: block; width: 100%; margin: 0 auto; }
+	    div.logo { margin: 0 auto; padding: 0; display: flex; justify-content: center; }
+            p { text-align: justify; font-size:1.875rem; }
+	    .pmaj { font-variant-caps: small-caps; }
+            a { color: #9a0000; text-decoration: underline dotted; }
+            a:hover { color: #ab2525; text-decoration: none; font-weight: 700;}
+	    @keyframes blink { 50% { color: transparent}}
+		.dot { animation: 1s blink infinite }
+		.dot:nth-child(2) { animation-delay: 250ms }
+		.dot:nth-child(3) { animation-delay: 500ms }
+        </style>
+	<link rel="icon" type="image/x-icon" href="favicon.ico">
+	<link rel="icon" type="image/svg+xml" href="favicon.svg">
+	<link rel="apple-touch-icon" href="apple-touch-icon.png">
+    </head>
+    <body>
+        <article>
+	    <div class="logo">
+		<img src="logohumous-notext-blue.png" width="20%" alt="Le logo des Mégères de l'Humus"/>
+	    </div>
+	    <h1>Nous serons bientôt de retour<span class="dot">.</span><span class="dot">.</span><span class="dot">.</span></h1>
+            <div>
+                <p>Nous sommes en cours de construction de notre site. Si besoin, <a href="mailto:compagnie@lesmegeresdelhumus.fr">contactez-nous</a>. En attendant vous pouvez nous rejoindre sur nos réseaux sociaux <a href="https://instagram.com/lesmegeresdelhumus?igshid=MzRIODBiNWFIZA==">Instagram</a>, ou sur <a href="https://www.facebook.com/profile.php?id=100093667065923">facebook</a>. &Agrave; tout bientôt !</p>
+                <p class="pmaj">&mdash; Les Mégères de l'Humus</p>
+            </div>
+        </article>
+    </body>
+</html>

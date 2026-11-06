@@ -1,0 +1,26 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA512
+
+Contact: mailto:security@lesmegeresdelhumus.fr
+Encryption: https://lesmegeresdelhumus.fr/.well-known/pgp-key.txt
+Acknowledgments: https://lesmegeresdelhumus.fr/politique-de-securite
+Policy: https://lesmegeresdelhumus.fr/politique-de-securite
+Preferred-Languages: fr, en
+Canonical: https://lesmegeresdelhumus.fr/.well-known/security.txt
+Expires: 2027-07-18T23:59:59.000Z
+-----BEGIN PGP SIGNATURE-----
+
+iQIzBAEBCgAdFiEEywBxfcuClxW7D0HD73p8qojOEfsFAmpbvAQACgkQ73p8qojO
+EfvvbQ//YHZoqfrSIUrD2MzKXshGK+ONTZmNwIgNFLvofJZfQpmGaFAYTvmU2zJ3
+5JTs0T4ysy6SJC/BJ8GsO5vWugRYbSLj1VgkXaVszzK4AAvCNosSZXK4m2gC1GR1
+zroBGv3tuDpyFLFL/vYHN5w1fD22P4bN0MRYjPEUKc/v57B/1lo+ERpFdwv3oTM4
+l8ZnEGqphQVG2pOa4j+pmqRVkjIpTbh3WoiMz4evef0TWc0GmUDZT1t+Rap/m0JT
+DiEbETJII84e6NY5NtnKE7qfsVLOaRNbnzVEm/dlq+Od5+Kj+SRYYl/mQgu2jHR9
+RFjszKWQPb9CJLErL6NYllqFiIxLKl/Fgytj3ekoPOlzQd5h8CUEcqBB81aa4cKn
+HQeophorYWeeuechhMr5Qld49oZlb8HXKYluNdieAJzxw5lzhluqQn614xqEukyr
+quoHcwjOpfPMmhhReyjKVRHEnbQ/xCYv9nGrqDD8IwAl4mwxWh13bfgdOOGxoFEv
+PFAcDWh/WxMNksNLTRuTgAnjK9PdGQp5YtsLuLAIfBQUDbN1Br9PD/jDZjOXO16r
+mTEfXPHZTYSWY8JRwX3bUQqSYJ+vG3n3jnkzZjdYv5GbAMk3e/eHro74OjY0KzAL
+0X2b+MeQwHYReOY2RPMZhcre7QSJ2zV/2137yKoYxNUYf/3VhPg=
+=PMPy
+-----END PGP SIGNATURE-----
