@@ -7,26 +7,33 @@
         </div><!--fermeture balise .CONTENEUR-CHAMPIGNONS-->
 
         <ul class="g_partenaires">
-            <li><a href="https://www.culture.gouv.fr/Regions/Drac-Occitanie" target="_blank" rel="noopener noreferrer">
-                <img src="<?php echo htmlspecialchars(site_path('/images/p_prefet-region-occitanie.png'), ENT_QUOTES, 'UTF-8');?>" alt="Drac-Occitanie"></a loading="lazy">
+            <li class="partenaire-carte-pro">
+                <img class="partenaire-lien-logo" src="<?php echo htmlspecialchars(site_path('/images/p_prefet-region-occitanie.png'), ENT_QUOTES, 'UTF-8');?>" alt="Drac-Occitanie"></a loading="lazy">
+                <a class="partenaire-btn-pro" href="https://www.culture.gouv.fr/Regions/Drac-Occitanie" target="_blank" rel="noopener noreferrer">Visiter le site</a>
             </li>
-            <li><a href="https://www.education.gouv.fr" target="_blank" rel="noopener noreferrer">
-                <img src="<?php echo htmlspecialchars(site_path('/images/p_fdva.png'), ENT_QUOTES, 'UTF-8');?>" alt="MEN - Fond pour le développement de la vie associative"></a loading="lazy">
+            <li class="partenaire-carte-pro">
+                <img class="partenaire-lien-logo" src="<?php echo htmlspecialchars(site_path('/images/p_fdva.png'), ENT_QUOTES, 'UTF-8');?>" alt="MEN - Fond pour le développement de la vie associative"></a loading="lazy">
+                <a class="partenaire-btn-pro" href="https://www.education.gouv.fr" target="_blank" rel="noopener noreferrer">Visiter le site</a>
             </li>
-            <li><a href="https://www.aude.fr" target="_blank" rel="noopener noreferrer">
-                <img src="<?php echo htmlspecialchars(site_path('/images/p_aude.png'), ENT_QUOTES, 'UTF-8');?>" alt="Aude, le département"></a loading="lazy">
+            <li class="partenaire-carte-pro">
+                <img class="partenaire-lien-logo" src="<?php echo htmlspecialchars(site_path('/images/p_aude.png'), ENT_QUOTES, 'UTF-8');?>" alt="Aude, le département"></a loading="lazy">
+                <a class="partenaire-btn-pro" href="https://www.aude.fr" target="_blank" rel="noopener noreferrer">Visiter le site</a>
             </li>
-            <li><a href="https://www.carcassonne-agglo.fr/fr/index.html" target="_blank" rel="noopener noreferrer">
-                <img src="<?php echo htmlspecialchars(site_path('/images/p_carcassonne-agglo.png'), ENT_QUOTES, 'UTF-8');?>" alt="Agglomération de Carcassonne"></a loading="lazy">
+            <li class="partenaire-carte-pro">
+                <img class="partenaire-lien-logo" src="<?php echo htmlspecialchars(site_path('/images/p_carcassonne-agglo.png'), ENT_QUOTES, 'UTF-8');?>" alt="Agglomération de Carcassonne"></a loading="lazy">
+                <a class="partenaire-btn-pro" href="https://www.carcassonne-agglo.fr/fr/index.html" target="_blank" rel="noopener noreferrer">Visiter le site</a>
             </li>
-            <li><a href="https://www.cdcmontagnenoire.fr" target="_blank" rel="noopener noreferrer">
-                <img src="<?php echo htmlspecialchars(site_path('/images/p_cdc-montagne-noire.png'), ENT_QUOTES, 'UTF-8');?>" alt="Communauté de Communnes de la Montagne Noire"></a loading="lazy">
+            <li class="partenaire-carte-pro">
+                <img class="partenaire-lien-logo" src="<?php echo htmlspecialchars(site_path('/images/p_cdc-montagne-noire.png'), ENT_QUOTES, 'UTF-8');?>" alt="Communauté de Communnes de la Montagne Noire"></a loading="lazy">
+                <a class="partenaire-btn-pro" href="https://www.cdcmontagnenoire.fr" target="_blank" rel="noopener noreferrer">Visiter le site</a>
             </li>
-            <li><a href="https://www.moussoulens.fr/associations/foyer-socio-culturel-de-moussoulens" target="_blank" rel="noopener noreferrer">
-                <img src="<?php echo htmlspecialchars(site_path('/images/p_fsc-theatre.png'), ENT_QUOTES, 'UTF-8');?>" alt="Foyer Socio-Culturel de Moussoulens"></a loading="lazy">
+            <li class="partenaire-carte-pro">
+                <img class="partenaire-lien-logo" src="<?php echo htmlspecialchars(site_path('/images/p_fsc-theatre.png'), ENT_QUOTES, 'UTF-8');?>" alt="Foyer Socio-Culturel de Moussoulens"></a loading="lazy">
+                <a class="partenaire-btn-pro" href="https://www.moussoulens.fr/associations/foyer-socio-culturel-de-moussoulens" target="_blank" rel="noopener noreferrer">Visiter le site</a>
             </li>
-            <li><a href="https://www.moussoulens.fr" target="_blank" rel="noopener noreferrer">
-                <img src="<?php echo htmlspecialchars(site_path('/images/p_blason-moussoulens.png'), ENT_QUOTES, 'UTF-8');?>" alt="La commune de Moussoulens"></a loading="lazy">
+            <li class="partenaire-carte-pro">
+                <img class="partenaire-lien-logo" src="<?php echo htmlspecialchars(site_path('/images/p_blason-moussoulens.png'), ENT_QUOTES, 'UTF-8');?>" alt="La commune de Moussoulens"></a loading="lazy">
+                <a class="partenaire-btn-pro" href="https://www.moussoulens.fr" target="_blank" rel="noopener noreferrer">Visiter le site</a>
             </li>
         </ul>
 

@@ -931,7 +931,7 @@ figure.bio {
     justify-self: center;
 }
 .g_partenaires img {
-    object-fit: cover;
+    object-fit: contain;
     width: 9.375rem;
 }
 /* Habillage de la carte et du bouton (Conformité charte) */
@@ -953,6 +953,22 @@ figure.bio {
     justify-content: center;
     flex-grow: 1;
     width: 100%;
+}
+.partenaire-btn-pro {
+    display: inline-block;
+    margin-top: 0.75rem;
+    padding: 0.35rem 0.75rem;
+    font-size: 0.85rem;
+    color: var(--color-brand-secondary);
+    border: 1px solid var(--color-brand-secondary);
+    border-radius: var(--radius-standard);
+    transition: all 0.2s ease;
+    text-align: center;
+    width: 100%;
+}
+.partenaire-btn-pro:hover {
+    background-color: var(--color-brand-secondary);
+    color: var(--color-white);
 }
 .spectacle-gresilhette {
     display:flex;
