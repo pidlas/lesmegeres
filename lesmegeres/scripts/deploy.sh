@@ -79,71 +79,23 @@ Options:
   --verify-post-owners  Enable remote owner:group verification in post-deploy checks.
   --no-backup           Skip remote backup creation before applying.
   --help                Show this help.
-
-Behavior:
-  On --apply, changed remote paths are normalized to a single owner:group AND chmod.
-  Owner:group is auto-detected from remote reference files, or forced via REMOTE_OWNER_GROUP.
-  Permissions default to 750 for directories and 640 for files (overridable via env).
-  Transfer detection is content-based (checksum), not metadata-based.
-  Backup/system files are excluded (for example: *.old, *.bak, *~, .DS_Store, Thumbs.db).
-  A backup is created at REMOTE_BASE.backup before each apply (disable with --no-backup).
-  By default, check-post-deploy.sh runs automatically after apply.
-
-Environment overrides:
-  SSH_HOST, SSH_PORT, SSH_USER, REMOTE_BASE, BASE_URL, REMOTE_OWNER_GROUP,
-  REMOTE_DIR_MODE (default: 750), REMOTE_FILE_MODE (default: 640),
-  RUN_POST_DEPLOY_CHECK, POST_DEPLOY_OWNER_VERIFY
-
-Examples:
-  ./deploy.sh
-  ./deploy.sh --apply
-  SSH_HOST=example.org SSH_PORT=22 ./deploy.sh --apply
 EOF
 }
 
 while [[ $# -gt 0 ]]; do
   case "$1" in
-    --apply)
-      APPLY_CHANGES=1
-      shift
-      ;;
-    --dry-run)
-      APPLY_CHANGES=0
-      shift
-      ;;
-    --no-backup)
-      BACKUP_ENABLED=0
-      shift
-      ;;
-    --fix-owners)
-      FIX_OWNERS=1
-      shift
-      ;;
-    --skip-check)
-      RUN_CHECKS=0
-      shift
-      ;;
-    --skip-post-check)
-      RUN_POST_DEPLOY_CHECK=0
-      shift
-      ;;
-    --verify-post-owners)
-      POST_DEPLOY_OWNER_VERIFY=1
-      shift
-      ;;
-    --help|-h)
-      usage
-      exit 0
-      ;;
-    *)
-      echo "Unknown option: $1" >&2
-      usage >&2
-      exit 1
-      ;;
+    --apply) APPLY_CHANGES=1; shift ;;
+    --dry-run) APPLY_CHANGES=0; shift ;;
+    --no-backup) BACKUP_ENABLED=0; shift ;;
+    --fix-owners) FIX_OWNERS=1; shift ;;
+    --skip-check) RUN_CHECKS=0; shift ;;
+    --skip-post-check) RUN_POST_DEPLOY_CHECK=0; shift ;;
+    --verify-post-owners) POST_DEPLOY_OWNER_VERIFY=1; shift ;;
+    --help|-h) usage; exit 0 ;;
+    *) echo "Unknown option: $1" >&2; usage >&2; exit 1 ;;
   esac
 done
 
-# Recalcul de BACKUP_PATH si REMOTE_BASE a été surchargé
 BACKUP_PATH="${BACKUP_PATH:-${REMOTE_BASE}.backup}"
 
 require_cmd() {
@@ -163,6 +115,7 @@ require_path() {
 require_cmd ssh
 require_cmd rsync
 require_cmd curl
+require_cmd git
 
 require_path "$LOCAL_PUBLIC_DIR/index.php"
 require_path "$LOCAL_APP_DIR/includes"
@@ -179,11 +132,9 @@ SSH_BASE_OPTS=(
 
 declare -A CHANGED_REMOTE_PATHS=()
 declare -A SYNC_REMOTE_PATHS=()
-
 RESTORED_OWNERSHIP_COUNT=0
 SKIPPED_OWNERSHIP_COUNT=0
 TARGET_OWNER_GROUP=""
-
 create_remote_backup() {
   if [[ "$BACKUP_ENABLED" -eq 0 ]]; then
     echo "==> Backup skipped (--no-backup)"
@@ -228,7 +179,6 @@ track_rsync_changes() {
   local changed_remote_path=""
 
   while IFS= read -r line; do
-    # Keep only rsync lines that represent transfer/create/link actions.
     if [[ ! "$line" =~ ^[\<\>ch][^[:space:]]+[[:space:]]+(.+)$ ]]; then
       continue
     fi
@@ -343,6 +293,43 @@ run_post_deploy_checks() {
   fi
 }
 
+push_to_github() {
+  if [[ $APPLY_CHANGES -eq 0 ]]; then
+    echo "==> Skipping GitHub push (DRY-RUN mode)"
+    return
+  fi
+
+  echo "==> Checking Git repository status..."
+  
+  # 🌟 ADAPTATION MASTER-DÉPÔT : On cible le dossier parent commun /var/www
+  local git_root="/var/www"
+
+  # Vérifie si le dossier local est un dépôt Git valide
+  if ! git -C "$git_root" rev-parse --is-inside-work-tree >/dev/null 2>&1; then
+    echo "Warning: $git_root is not a Git repository. Skipping GitHub push." >&2
+    return
+  fi
+
+  # Vérifie s'il y a des changements non commités en local (Public + App)
+  if ! git -C "$git_root" diff-index --quiet HEAD --; then
+    echo "==> Local changes detected. Creating an automatic deployment commit..."
+    git -C "$git_root" add .
+    git -C "$git_root" commit -m "chore(deploy): automatic backup before deployment - $(date +'%Y-%m-%d %H:%M:%S')"
+  fi
+
+  # Récupère le nom de la branche courante (ex: main)
+  local current_branch
+  current_branch="$(git -C "$git_root" branch --show-current)"
+
+  echo "==> Pushing local history to GitHub (branch: $current_branch)..."
+  if git -C "$git_root" push origin "$current_branch"; then
+    echo "==> GitHub repository successfully updated!"
+  else
+    echo "Error: Failed to push to GitHub. Please check your network or remote URL." >&2
+    exit 1
+  fi
+}
+
 cleanup() {
   ssh "${SSH_BASE_OPTS[@]}" -O exit "$TARGET" >/dev/null 2>&1 || true
 }
@@ -364,7 +351,7 @@ ssh "${SSH_BASE_OPTS[@]}" "$TARGET" true
 
 if [[ $FIX_OWNERS -eq 1 ]]; then
   detect_target_owner_group
-  echo "==> Re-applying owner:group $TARGET_OWNER_GROUP to all remote files (my_webapp__3/ parent conservé root:root)"
+  echo "==> Re-applying owner:group $TARGET_OWNER_GROUP to all remote files"
   ssh "${SSH_BASE_OPTS[@]}" "$TARGET" "
     find '$REMOTE_PUBLIC_DIR' '$REMOTE_APP_DIR' -not -path '*/.git/*' -print0 | xargs -0 chown '$TARGET_OWNER_GROUP'
     find '$REMOTE_PUBLIC_DIR' '$REMOTE_APP_DIR' -type d -not -path '*/.git/*' -exec chmod '$REMOTE_DIR_MODE' {} +
@@ -398,7 +385,6 @@ if [[ $APPLY_CHANGES -eq 0 ]]; then
   RSYNC_OPTS+=(--dry-run)
 fi
 
-
 if [[ $APPLY_CHANGES -eq 1 ]]; then
   detect_target_owner_group
   create_remote_backup
@@ -411,7 +397,6 @@ if [[ $APPLY_CHANGES -eq 1 ]]; then
   fi
 fi
 
-# AJUSTEMENT : Ce bloc s'exécute désormais EN PERMANENCE (dry-run compris)
 if command -v npx >/dev/null 2>&1; then
   if [[ -f "$LOCAL_PUBLIC_DIR/css/style.css" ]]; then
     echo "==> Minifying CSS (style.css → style.min.css) via postcss+cssnano"
@@ -485,7 +470,9 @@ if [[ $RUN_CHECKS -eq 0 ]]; then
 fi
 
 print_sync_summary
-
 run_post_deploy_checks
+
+# 🌟 DÉCLENCHEMENT DE LA SAUVEGARDE AUTOMATIQUE SUR GITHUB
+push_to_github
 
 echo "==> Déploiement terminé avec succès"
