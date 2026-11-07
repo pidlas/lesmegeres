@@ -154,7 +154,7 @@
                 </p>
             </div><!--fermeture balise .G_CO-ITEM10-->
             <div class="g_co-item11">
-                <img class="forme-erinyes" alt="Les Erynies, peinture moderne" src="<?php echo htmlspecialchars(site_path('/images/co_les-erynies.jpg'), ENT_QUOTES, 'UTF-8');?>" loading="lazy">
+                <img class="forme-erinyes" alt="Les Erynies, peinture moderne" src="<?php echo htmlspecialchars(site_path('/images/co_les-erynies.webp'), ENT_QUOTES, 'UTF-8');?>" loading="lazy">
                 <p>Lorsque nous étions à la recherche d’une figure symbolique de femmes puissantes nous sommes revenues à 
                     notre amour premier du théâtre autour des histoires et de la mythologie. C'était important pour nous de 
                     toujours faire appel à nos racines. Nous avons alors redécouvert avec plaisir le mythe des Érinyes. Et oui ! 

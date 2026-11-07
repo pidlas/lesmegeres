@@ -46,7 +46,7 @@
             de personnes âgé&middot;e&middot;s et isolé&middot;e&middot;s, notamment des femmes.
         </p>
         <div class="lampe-wrapper">
-            <img class="forme-lampe" alt="Lampe et horloge, les contes occitans" src="<?php echo htmlspecialchars(site_path('/images/lampe-horloge.jpg'), ENT_QUOTES, 'UTF-8');?>" loading="lazy">
+            <img class="forme-lampe" alt="Lampe et horloge, les contes occitans" src="<?php echo htmlspecialchars(site_path('/images/lampe-horloge.webp'), ENT_QUOTES, 'UTF-8');?>" loading="lazy">
             <p>
                 Sous le prisme du féminisme, une des valeurs phare de la compagnie, Sabine et Suzie sont donc 
                 parties à la rencontre des vieilles dames de plus de 80 ans pour récolter leur témoignage de 
