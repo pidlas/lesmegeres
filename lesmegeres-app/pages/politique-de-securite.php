@@ -6,7 +6,7 @@
             <h1>Politique de sécurité</h1>
         </div><!--fermeture balise .CONTENEUR-CHAMPIGNONS-->
 
-        <p class="p_first">Merci de signaler toute vulnérabilité de sécurité à l'adresse 
+        <p>Merci de signaler toute vulnérabilité de sécurité à l'adresse 
             <a data-type="external" href="mailto:security@lesmegeresdelhumus.fr">security@lesmegeresdelhumus.fr</a>
             <span class="lien-e-seul"></span>.
         </p>

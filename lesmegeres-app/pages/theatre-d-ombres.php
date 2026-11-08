@@ -21,7 +21,7 @@
         <div class="montage-wrapper">
             <h2 class="display-title">Nos sources d'inspiration</h2>
             <img class="forme-montage" alt="Photos donnant de l'inspiration" src="<?php echo htmlspecialchars(site_path('/images/montage-inspiration.jpg'), ENT_QUOTES, 'UTF-8');?>" loading="lazy">
-            <p class="p_first">
+            <p>
                 Pendant notre enfance, notre adolescence et notre vie de jeunes adultes nous nous 
                 sommes rendu&middot;e&middot;s compte que nous avions des références communes dans plusieurs 
                 domaines artistiques. Nous avons décidé de réunir ses inspirations qui nous ressemblent 
@@ -39,7 +39,7 @@
                 <li>Et à la fin, ils meurent de Lou Lubie</li>
                 <li>Les Triplettes de Belleville de S. Chomet</li>
             </ul>
-            <p>
+            <p class="marge-haute">
                 Pour jouer en intérieur, nous vous proposons le format théâtre d’ombres. Celui-ci apporte 
                 une dimension magique et surnaturelle aux deux personnages du conte. Il a été conçu pour 
                 recréer l’ambiance des veillées que vivaient nos grands-parents.

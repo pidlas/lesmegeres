@@ -103,7 +103,7 @@ require __DIR__ . '/../includes/header.php';
       <h1>Actualités</h1>
     </div>
 
-    <p class="p_first">
+    <p>
       Retrouvez ici les actualités de la compagnie <em>Les Mégères de l'Humus</em> : prochaines représentations, sorties de création, 
       rendez-vous de théâtre forum, ateliers et temps forts de la compagnie.
     </p>

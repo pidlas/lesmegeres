@@ -16,7 +16,7 @@
                 <img src="<?php echo htmlspecialchars(site_path('/images/sp_projet-pedagogique.png'), ENT_QUOTES, 'UTF-8');?>" width="200" alt="Le projet pédagogique - Grésilhette et la Salimonde">
             </a>
         </div><!--fermeture balise P_PROJET-PEDAGOGIQUE-->
-        <p class="p_first">
+        <p>
             Le projet pédagogique accompagne les spectacles de la compagnie avec 
             des outils concrets pour préparer, prolonger et approfondir l'expérience artistique. 
             Il s'appuie sur l'expression orale, l'esprit critique, la coopération et la créativité.

@@ -17,7 +17,7 @@
                 <img src="<?php echo htmlspecialchars(site_path('/images/sp_projet-pedagogique.png'), ENT_QUOTES, 'UTF-8');?>" width="200" alt="Le projet pédagogique - Grésilhette et la Salimonde">
             </a>
         </div><!--fermeture balise P_SIESTE-CONTEE-->
-        <p class="p_first">La sieste contée propose une expérience douce, sensible et immersive à 
+        <p>La sieste contée propose une expérience douce, sensible et immersive à 
             partir de l'univers de <em>Grésilhette et la Salimonde</em>. Cette forme privilégie 
             l'écoute, le rythme et l'imaginaire, dans une ambiance propice au relâchement et à la 
             rêverie.

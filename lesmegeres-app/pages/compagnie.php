@@ -71,7 +71,7 @@
                 </figure>
             <!--</div>fermeture balise .G_CO-ITEM4
             <div class="g_co-item5">-->
-                <p>Rien que ça&nbsp;! Alors nous nous nourrissons intellectuellement, politiquement, 
+                <p class="marge-haute">Rien que ça&nbsp;! Alors nous nous nourrissons intellectuellement, politiquement, 
                     socialement, humainement pour transmettre tout ce que nous apprenons 
                     aux petit&middot;e&middot;s et aux plus grand&middot;e&middot;s. Nous nous éduquons 
                     avec l’aide de notre public et nous réinventons des espaces dédiés aux relations 

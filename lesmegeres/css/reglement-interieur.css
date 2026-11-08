@@ -1,11 +1,10 @@
 .marge {
-    border-left: 0.75rem solid #f7ae56;
+    border-left: 0.75rem solid var(--color-brand-accent);
     border-radius: 0.5rem;
-    margin-bottom: 2rem;
     padding-left: 1.875rem;
 }
 
 .marge.important {
-    border-left-color: #e74c3c !important;
-    background-color: rgba(231, 76, 60, 0.05) !important;
+    border-left-color:var(--color-border-alizarine);
+    background-color:var(--color-highlight-alizarine);
 }

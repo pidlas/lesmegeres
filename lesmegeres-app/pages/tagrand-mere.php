@@ -69,22 +69,22 @@
             <li>Vous souvenez-vous d’un moment en particulier où vous avez ressenti un bonheur intense&nbsp;?</li>
             <li>Voulez-vous nous le partager&nbsp;? etc.</li>
         </ul>
-        <p>Nous finissons l’entretien par une petite séance photo de la personne. Nous offrons les photos 
-            aux dames et/ou à leur famille pour qu’iels aient un joli souvenir de ce moment convivial.
-        </p>
-        <p>Dans notre démarche artistique il y a toute une dimension de soin. Pendant <span class="nombre">1</span>h 
-            nous nous rendons entièrement disponible. C’est plus qu’un témoignage, c’est un vrai temps 
-            de rencontre. Toutes les femmes que nous avons enregistrées nous ont exprimées leur joie d’avoir 
-            passé des moments intimes et d'empouvoirement en notre compagnie. Elles pouvaient enfin déposer 
-            leurs expériences de vie en étant considérées et valorisées.
-        </p>
-        <p>Nous sommes toujours à la recherche de nouvelles rencontres. Plus nous avons de témoignages, 
-            plus notre propos sera juste et universel.
-        </p>
-        <p>Si vous connaissez des dames âgées susceptibles d'être intéressées par notre projet, n'hésitez 
-            pas à nous <a data-type="internal" href="<?php echo htmlspecialchars(site_path('/contact'), ENT_QUOTES, 'UTF-8');?>" 
-            alt="Pour contacter les Mégères de l'Humus">contacter</a><span class="lien-i-seul"></span>.</p>
-
+        <div class="texte">
+            <p>Nous finissons l’entretien par une petite séance photo de la personne. Nous offrons les photos 
+                aux dames et/ou à leur famille pour qu’iels aient un joli souvenir de ce moment convivial.
+            </p>
+            <p>Dans notre démarche artistique il y a toute une dimension de soin. Pendant <span class="nombre">1</span>h 
+                nous nous rendons entièrement disponible. C’est plus qu’un témoignage, c’est un vrai temps 
+                de rencontre. Toutes les femmes que nous avons enregistrées nous ont exprimées leur joie d’avoir 
+                passé des moments intimes et d'empouvoirement en notre compagnie. Elles pouvaient enfin déposer 
+                leurs expériences de vie en étant considérées et valorisées.
+            </p>
+            <p>Nous sommes toujours à la recherche de nouvelles rencontres. Plus nous avons de témoignages, 
+                plus notre propos sera juste et universel. Si vous connaissez des dames âgées susceptibles d'être intéressées par notre projet, n'hésitez 
+                pas à nous <a data-type="internal" href="<?php echo htmlspecialchars(site_path('/contact'), ENT_QUOTES, 'UTF-8');?>" 
+                alt="Pour contacter les Mégères de l'Humus">contacter</a><span class="lien-i-seul"></span>.
+            </p>
+        </div>
     <div class="conteneur-feuilles">
         <img src="<?php echo htmlspecialchars(site_path('/images/i_feuilles.svg'), ENT_QUOTES, 'UTF-8');?>" class="feuilles" alt="" loading="lazy">
     </div><!--fermeture balise .CONTENEUR-FEUILLES-->

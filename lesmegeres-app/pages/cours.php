@@ -33,7 +33,7 @@
             </div>
         </div><!--fermeture de la balise WRAPPER-AUDIO-->
         <div>
-            <p class="p_first">La compagnie organise des cours pour faire découvrir le théâtre aux curieuses et curieux. Dans 
+            <p>La compagnie organise des cours pour faire découvrir le théâtre aux curieuses et curieux. Dans 
                 ces cours toutes les dimensions du travail de la scène sont abordées : le déplacement, la prise de parole, le 
                 jeu seul et à plusieurs. Les professeur&middot;e&middot;s sont des professionnel&middot;le&middot;s du métier 
                 et abordent les cours avec bienveillance et sérieux. Pour toutes informations complémentaires <a data-type="internal" 

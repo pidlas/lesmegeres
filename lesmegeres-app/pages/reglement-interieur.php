@@ -3,7 +3,7 @@
 <link rel="stylesheet" href="<?php echo htmlspecialchars(site_path('/css/reglement-interieur.css'), ENT_QUOTES, 'UTF-8');?>">
 
 <main>
-    <section>
+    <section class="reglement-interieur">
         <div class="conteneur-champignons">
             <img src="<?php echo htmlspecialchars(site_path('/images/i_champignons.svg'), ENT_QUOTES, 'UTF-8');?>" class="champignons" alt="" loading="lazy">
             <h1>Règlement intérieur</h1>

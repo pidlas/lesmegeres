@@ -12,9 +12,8 @@
                     <img class="photo-stages-ateliers" src="<?php echo htmlspecialchars(site_path('/images/stages.jpg'), ENT_QUOTES, 'UTF-8');?>" alt="Un stage de théâtre de la Compagnie Les Mégères de l'Humus" loading="lazy">
                 </picture>
             </div>
-            <p class="p_first">Ces stages sont pensés pour progresser en confiance, découvrir différents 
-                langages scéniques et vivre une aventure collective. La compagnie intervient auprès de 
-                publics débutants ou déjà pratiquants.
+            <p>Ces stages sont pensés pour progresser en confiance, découvrir différents langages scéniques et vivre une aventure collective. La compagnie 
+                intervient auprès de publics débutants ou déjà pratiquants.
             </p>
             <p>Pour connaître les prochaines dates, les lieux d'accueil et les modalités d'inscription 
                 autour de Carcassonne et de Moussoulens, rendez-vous sur la page <a data-type="internal" href="<?php echo htmlspecialchars(site_path('/contact'), ENT_QUOTES, 'UTF-8');?>">Contact</a>.
