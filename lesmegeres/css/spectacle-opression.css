@@ -6,11 +6,6 @@ Architecture : Mobile-First / Sans Cadres / Sans Filtres / Ancrages Fixes
 /* --------------------------------------------------------------------------
 1. STRUCTURE GLOBALE & ISOLEMENT
 -------------------------------------------------------------------------- */
-.page-container {
-    position: relative;
-    width: 100%;
-    padding: 0; 
-}
 .section-spectacle {
     position: relative;
     width:100%;
@@ -62,7 +57,7 @@ Architecture : Mobile-First / Sans Cadres / Sans Filtres / Ancrages Fixes
 /* --------------------------------------------------------------------------
 2. CONFIGURATION DE BASE DES BULLES (100% Nettes, Sans Bordures ni Ombres)
 -------------------------------------------------------------------------- */
-.page-container .bulle-fond {
+.section-spectacle .bulle-fond {
     position:absolute;
     display:block;
     visibility:visible;
