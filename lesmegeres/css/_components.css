@@ -105,14 +105,11 @@ p.traduction {
 .g_equipe.g_permanents p {
     margin-top:0;
 }
-main p:nth-of-type(1):not(.reglement-interieur p):not(.actu-resume):not(.page_equipe p){
+main p:nth-of-type(1):not(.reglement-interieur p):not(.actu-resume):not(.page_equipe p):not(.mentions-legales p){
     margin-top: var(--space-m);
 }
 .marge-haute{
     margin-top: var(--space-m);
-}
-.mentions-legales .p_no-margin-top{
-    margin-top:0;
 }
 .p_centrer {
     text-align: center;
@@ -941,8 +938,8 @@ figure.bio {
 .partenaire-carte-pro {
     display:flex;
     background-color: var(--color-white);
-    border-radius: var(--radius-standard);
-    padding: 1.25rem;
+    border-radius:var(--radius-standard);
+    padding:1.25rem;
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
@@ -1343,6 +1340,55 @@ th.sep {
 }
 .first-of-type {
     margin-top: var(--space-l);
+}
+.btn-mailto {
+    display:inline-flex;
+    align-items:center;
+    gap:8px;
+    background-color:var(--color-brand-primary);
+    color:var(--color-black);
+    padding:8px 18px;
+    font-weight:600;
+    text-decoration:none;
+    border-radius:var(--radius-standard);
+    border:none;
+    transition: background-color 0.2s ease-in-out, transform 0.1s ease-in-out;
+    box-shadow: 0 2px 4px hsla(0, 0%, 0%, 0.1);
+    vertical-align:middle;
+    margin:2px 4px;
+}
+.btn-mailto:hover {
+    background-color:hsla(33, 76%, 57%, 1); 
+    color:var(--color-black);
+    transform: translateY(-1px);
+    box-shadow: 0 4px 6px hsla(0, 0%, 0%, 0.1);
+}
+.btn-mailto:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 3px hsla(0, 0%, 0%, 0.1);
+}
+.btn-mailto::before {
+    content: "\f023";
+    font-family: "Font Awesome 5 Free", "Font Awesome 6 Free", "FontAwesome";
+    font-weight:900;
+    font-size:0.9em;
+    margin-right:0.5rem;
+    opacity:0.8;
+}
+.btn-mailto::after {
+    content: "";
+    display: inline-block;
+    width:0.875rem;
+    height:0.625rem;
+    margin-left:0.5rem;
+        background: 
+        linear-gradient(160deg, transparent 44%, hsla(0,0%,0%,1) 46%, hsla(0,0%,0%,1) 54%, transparent 56%) 0 0/100% 100%,
+        linear-gradient(200deg, transparent 44%, hsla(0,0%,0%,1) 46%, hsla(0,0%,0%,1) 54%, transparent 56%) 0 0/100% 100%,
+        linear-gradient(to bottom, hsla(0,0%,0%,1) 2px, transparent 2px) 0 0/100% 100%;
+    border: 1.5px solid hsla(0,0%,0%,1);
+    border-top:none;
+    opacity:0.8;
+    vertical-align: middle;
 }
 
 @media screen and (min-width: 421px) {

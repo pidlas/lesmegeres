@@ -8,9 +8,9 @@ Architecture : Mobile-First / Sans Cadres / Sans Filtres / Ancrages Fixes
 -------------------------------------------------------------------------- */
 .section-spectacle {
     position: relative;
+    overflow: hidden; /* Empêche les bulles de créer un scroll horizontal */
     width:100%;
     padding:0;
-    overflow: hidden; /* Empêche les bulles de créer un scroll horizontal */
 }
 .opression-wrapper {
     position: relative;
@@ -40,11 +40,11 @@ Architecture : Mobile-First / Sans Cadres / Sans Filtres / Ancrages Fixes
     z-index: 6; 
 }
 .format-bloc { 
-    background: var(--color-white); 
-    padding: 0 var(--space-s); 
+    background:var(--color-white); 
+    padding:0 var(--space-s); 
     border-radius:var(--radius-standard); 
-    border: 2px solid hsla(264, 28%, 23%, 0.15);
-    box-shadow: 12px 4px 12px hsla(0, 0%, 0%, .3);
+    border:2px solid hsla(264, 28%, 23%, 0.15);
+    box-shadow:12px 4px 12px hsla(0, 0%, 0%, .3);
 }
 .opression-tarifs {
     position:relative;

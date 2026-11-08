@@ -22,7 +22,7 @@
         <h3 class="display-title">Conditions Générales d'Utilisation</h3>
 
         <h3>Article 1 : Accès au site</h3>
-            <p class="p_no-margin-top">
+            <p>
                 Les informations et documents du site sont présentés à titre indicatif, sans de caractère exhaustif, et ne peuvent engager la 
                 responsabilité des propriétaires du site. Les propriétaires du site ne peuvent être tenues responsables des dommages directs et 
                 indirects consécutifs à l’accès au site. Le site est accessible gratuitement en tout lieu à tout Utilisateur ayant un accès à 

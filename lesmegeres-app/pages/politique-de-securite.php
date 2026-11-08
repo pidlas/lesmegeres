@@ -7,8 +7,7 @@
         </div><!--fermeture balise .CONTENEUR-CHAMPIGNONS-->
 
         <p>Merci de signaler toute vulnérabilité de sécurité à l'adresse 
-            <a data-type="external" href="mailto:security@lesmegeresdelhumus.fr">security@lesmegeresdelhumus.fr</a>
-            <span class="lien-e-seul"></span>.
+            <a data-type="external" class="btn-mailto" href="mailto:security@lesmegeresdelhumus.fr">security@lesmegeresdelhumus.fr</a>
         </p>
         <p>Nous vous remercions de ne pas publier publiquement la vulnérabilité avant que nous ayons 
             eu le temps d'y répondre.
