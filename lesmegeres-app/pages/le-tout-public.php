@@ -26,18 +26,16 @@
 
             <!-- Le contenu textuel -->
             <div class="opression-wrapper">
-                <p>
-                    Sensibilisation interactive par le Théâtre-Forum pour les entreprises, associations, 
-                    équipes pédagogiques, centres de loisirs, théâtres, festivals, collectivités territoriales, 
-                    écoles supérieures et toutes autres structures intéressées.
+                <h2 class="display-title">Sensibilisation interactive par le Théâtre-Forum</h2>
+                
+                <p>Nous proposons le spectacle de Théâtre-Forum <em>0'Pression</em>pour les entreprises, associations, équipes pédagogiques, centres de loisirs, 
+                    théâtres, festivals, collectivités territoriales, écoles supérieures et toutes autres structures intéressées afin de sensibiliser les adultes 
+                    de 18 à 99 ans à des problématiques sociales de manière interactive (discriminations, oppressions, conflits, questions d'actualité...).
                 </p>
 
                 <div class="opression-corps">
-                    <p>Nous proposons le spectacle de Théâtre-Forum <em>O'Pression</em> afin de sensibiliser les 
-                        adultes de 18 à 99 ans à des problématiques sociales de manière interactive (discriminations, 
-                        oppressions, conflits, questions d'actualité...).</p>
-                    <p>Dans un cadre bienveillant et ludique, le public peut alors réfléchir, s'exprimer et agir 
-                        autour de problématiques parfois difficiles à aborder.</p>
+                    <p>Dans un cadre bienveillant et ludique, le public peut alors réfléchir, s'exprimer et agir autour de problématiques parfois difficiles à 
+                        aborder en dehors d'un cadre sécurisant.</p>
                     
                     <h2 class="display-title">Objectifs pédagogiques</h2>
                     <ul class="jolie-ombres slide-list">

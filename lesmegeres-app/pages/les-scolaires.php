@@ -26,16 +26,11 @@
 
             <!-- Le contenu textuel -->
             <div class="opression-wrapper">
-                <p>
-                    Sensibilisation interactive par le Théâtre-Forum.
-                </p>
-
+                <h2 class="display-title">Sensibilisation interactive par le Théâtre-Forum</h2>
                 <div class="opression-corps">
-                    <p>Nous proposons le spectacle de Théâtre-Forum <em>0'Pression</em> afin de sensibiliser les 
-                        jeunes de 11 à 18 ans à des problématiques sociales de manière interactive (discriminations, 
-                        oppressions, conflits, questions d’actualité…).</p>
-                    <p>Dans un cadre bienveillant et ludique, les élèves peuvent alors réfléchir, s’exprimer et agir 
-                        autour de problématiques parfois difficiles à aborder.</p>
+                    <p>Nous proposons le spectacle de Théâtre-Forum <em>0'Pression</em> afin de sensibiliser les jeunes de 11 à 18 ans à des problématiques 
+                        sociales de manière interactive (discriminations, oppressions, conflits, questions d’actualité…). Dans un cadre bienveillant et ludique, 
+                        les élèves peuvent alors réfléchir, s’exprimer et agir autour de problématiques parfois difficiles à aborder.</p>
                     
                     <h2 class="display-title">Objectifs pédagogiques</h2>
                     <ul class="jolie-ombres slide-list">

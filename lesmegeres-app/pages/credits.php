@@ -1,6 +1,6 @@
 <?php require __DIR__ . '/../includes/header.php'; ?>
 <main>
-    <section>
+    <section class="credits">
         <div class="conteneur-champignons">
             <img class="champignons" alt="" src="<?php echo htmlspecialchars(site_path('/images/i_champignons.svg'), ENT_QUOTES, 'UTF-8');?>" loading="lazy">
             <h1>Crédits</h1>
