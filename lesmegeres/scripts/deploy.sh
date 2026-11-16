@@ -2,7 +2,7 @@
 
 set -euo pipefail
 
-SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE}")" && pwd)"
 REPO_ROOT="$(cd "$SCRIPT_DIR/.." && pwd)"
 LOCAL_PUBLIC_DIR="$REPO_ROOT"
 LOCAL_APP_DIR="$(cd "$REPO_ROOT/../lesmegeres-app" && pwd)"
@@ -21,6 +21,7 @@ POST_DEPLOY_SCRIPT="$SCRIPT_DIR/check-post-deploy.sh"
 GENERATE_SITEMAP_SCRIPT="$SCRIPT_DIR/generate-sitemap.sh"
 
 APPLY_CHANGES=0
+DELETE_REMOTE=0
 RUN_CHECKS=1
 RUN_POST_DEPLOY_CHECK="${RUN_POST_DEPLOY_CHECK:-1}"
 POST_DEPLOY_OWNER_VERIFY="${POST_DEPLOY_OWNER_VERIFY:-0}"
@@ -73,6 +74,7 @@ Usage: ./deploy.sh [options]
 Options:
   --apply               Execute the deployment. Default is dry-run.
   --dry-run             Show what would be deployed without changing the server.
+  --allow-delete        Allow remote deletion of files that no longer exist locally.
   --fix-owners          Re-apply owner:group to all remote files without transferring.
   --skip-check          Skip HTTP smoke tests after deployment.
   --skip-post-check     Skip automatic check-post-deploy.sh execution.
@@ -86,6 +88,7 @@ while [[ $# -gt 0 ]]; do
   case "$1" in
     --apply) APPLY_CHANGES=1; shift ;;
     --dry-run) APPLY_CHANGES=0; shift ;;
+    --allow-delete) DELETE_REMOTE=1; shift ;;
     --no-backup) BACKUP_ENABLED=0; shift ;;
     --fix-owners) FIX_OWNERS=1; shift ;;
     --skip-check) RUN_CHECKS=0; shift ;;
@@ -132,9 +135,11 @@ SSH_BASE_OPTS=(
 
 declare -A CHANGED_REMOTE_PATHS=()
 declare -A SYNC_REMOTE_PATHS=()
+declare -A DELETE_REMOTE_PATHS=()
 RESTORED_OWNERSHIP_COUNT=0
 SKIPPED_OWNERSHIP_COUNT=0
 TARGET_OWNER_GROUP=""
+
 create_remote_backup() {
   if [[ "$BACKUP_ENABLED" -eq 0 ]]; then
     echo "==> Backup skipped (--no-backup)"
@@ -170,6 +175,19 @@ detect_target_owner_group() {
   exit 1
 }
 
+confirm_remote_delete() {
+  if [[ $DELETE_REMOTE -eq 0 || $APPLY_CHANGES -eq 0 ]]; then
+    return 0
+  fi
+
+  echo ""
+  echo "==> WARNING: --allow-delete is enabled. Files removed locally will be deleted on $TARGET."
+  read -r -p "Type DELETE to continue: " confirmation
+  if [[ "$confirmation" != "DELETE" ]]; then
+    echo "==> Aborted. Remote deletions were not performed."
+    exit 0
+  fi
+}
 track_rsync_changes() {
   local itemized_file="$1"
   local remote_path="$2"
@@ -179,11 +197,21 @@ track_rsync_changes() {
   local changed_remote_path=""
 
   while IFS= read -r line; do
+    if [[ "$line" =~ ^\*deleting[[:space:]]+(.+)$ ]]; then
+      rel="${BASH_REMATCH}"
+      rel="${rel#./}"
+      rel="${rel%/}"
+      if [[ "$is_dir" -eq 1 && -n "$rel" && "$rel" != "." ]]; then
+        DELETE_REMOTE_PATHS["$remote_path/$rel"]=1
+      fi
+      continue
+    fi
+
     if [[ ! "$line" =~ ^[\<\>ch][^[:space:]]+[[:space:]]+(.+)$ ]]; then
       continue
     fi
 
-    rel="${BASH_REMATCH[1]}"
+    rel="${BASH_REMATCH}"
     rel="${rel#./}"
     rel="${rel%/}"
 
@@ -210,13 +238,18 @@ sync_with_tracking() {
   local remote_path="$2"
   local is_dir="$3"
   local itemized_file=""
+  local local_opts=("${RSYNC_OPTS[@]}")
+
+  if [[ "$is_dir" -eq 1 && $DELETE_REMOTE -eq 1 ]]; then
+    local_opts+=(--delete)
+  fi
 
   itemized_file="$(mktemp)"
 
   if [[ "$is_dir" -eq 1 ]]; then
-    rsync "${RSYNC_OPTS[@]}" "$local_path/" "$TARGET:$remote_path/" | tee "$itemized_file"
+    rsync "${local_opts[@]}" "$local_path/" "$TARGET:$remote_path/" | tee "$itemized_file"
   else
-    rsync "${RSYNC_OPTS[@]}" "$local_path" "$TARGET:$remote_path" | tee "$itemized_file"
+    rsync "${local_opts[@]}" "$local_path" "$TARGET:$remote_path" | tee "$itemized_file"
   fi
 
   track_rsync_changes "$itemized_file" "$remote_path" "$is_dir"
@@ -240,13 +273,16 @@ apply_target_ownership() {
 print_sync_summary() {
   local mode_label=""
   local title=""
+  local del_title=""
 
   if [[ $APPLY_CHANGES -eq 1 ]]; then
     mode_label="APPLY"
     title="Files transferred"
+    del_title="Files deleted"
   else
     mode_label="DRY-RUN"
     title="Files that would be transferred"
+    del_title="Files that would be deleted"
   fi
 
   echo "==> Summary ($mode_label)"
@@ -256,6 +292,15 @@ print_sync_summary() {
     while IFS= read -r path; do
       echo " - $path"
     done < <(printf '%s\n' "${!SYNC_REMOTE_PATHS[@]}" | sort)
+  fi
+
+  if [[ $DELETE_REMOTE -eq 1 ]]; then
+    echo "==> $del_title: ${#DELETE_REMOTE_PATHS[@]}"
+    if [[ ${#DELETE_REMOTE_PATHS[@]} -gt 0 ]]; then
+      while IFS= read -r path; do
+        echo " - [DEL] $path"
+      done < <(printf '%s\n' "${!DELETE_REMOTE_PATHS[@]}" | sort)
+    fi
   fi
 
   if [[ $APPLY_CHANGES -eq 1 ]]; then
@@ -301,23 +346,19 @@ push_to_github() {
 
   echo "==> Checking Git repository status..."
   
-  # 🌟 ADAPTATION MASTER-DÉPÔT : On cible le dossier parent commun /var/www
   local git_root="/var/www"
 
-  # Vérifie si le dossier local est un dépôt Git valide
   if ! git -C "$git_root" rev-parse --is-inside-work-tree >/dev/null 2>&1; then
     echo "Warning: $git_root is not a Git repository. Skipping GitHub push." >&2
     return
   fi
 
-  # Vérifie s'il y a des changements non commités en local (Public + App)
   if ! git -C "$git_root" diff-index --quiet HEAD --; then
     echo "==> Local changes detected. Creating an automatic deployment commit..."
     git -C "$git_root" add .
     git -C "$git_root" commit -m "chore(deploy): automatic backup before deployment - $(date +'%Y-%m-%d %H:%M:%S')"
   fi
 
-  # Récupère le nom de la branche courante (ex: main)
   local current_branch
   current_branch="$(git -C "$git_root" branch --show-current)"
 
@@ -344,6 +385,12 @@ elif [[ $APPLY_CHANGES -eq 1 ]]; then
   echo "==> Mode: APPLY"
 else
   echo "==> Mode: DRY-RUN"
+fi
+
+if [[ $DELETE_REMOTE -eq 1 ]]; then
+  echo "==> Remote deletions are ENABLED (--allow-delete)"
+else
+  echo "==> Remote deletions are disabled; files on the target server will be preserved"
 fi
 
 echo "==> Opening SSH control connection"
@@ -386,6 +433,7 @@ if [[ $APPLY_CHANGES -eq 0 ]]; then
 fi
 
 if [[ $APPLY_CHANGES -eq 1 ]]; then
+  confirm_remote_delete
   detect_target_owner_group
   create_remote_backup
 
@@ -472,7 +520,6 @@ fi
 print_sync_summary
 run_post_deploy_checks
 
-# 🌟 DÉCLENCHEMENT DE LA SAUVEGARDE AUTOMATIQUE SUR GITHUB
 push_to_github
 
 echo "==> Déploiement terminé avec succès"
