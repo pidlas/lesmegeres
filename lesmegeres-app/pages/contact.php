@@ -7,7 +7,7 @@
             <p class="sous-titre">&hellip;Pour tout renseignement, fiche technique & tarif du spectacle</p>
         </div><!--fermeture balise .CONTENEUR-CHAMPIGNONS-->
         <div class="telephone">
-            <p><img src="<?php echo htmlspecialchars(site_path('/images/iconeTel.png'), ENT_QUOTES, 'UTF-8'); ?>" width="50px" alt=""></p>
+            <p><img src="<?php echo htmlspecialchars(site_path('/images/iconeTel.webp'), ENT_QUOTES, 'UTF-8'); ?>" width="50px" alt=""></p>
             <table class="com">
                 <theader>
                     <th colspan="2" class="tresgras">Diffusion</th>
@@ -39,7 +39,7 @@
         </div>
         
         <div class="infos-contact">
-            <img src="<?php echo htmlspecialchars(site_path('/images/iconeMail.png'), ENT_QUOTES, 'UTF-8'); ?>" width="50px" alt="">
+            <img src="<?php echo htmlspecialchars(site_path('/images/iconeMail.webp'), ENT_QUOTES, 'UTF-8'); ?>" width="50px" alt="">
             <span><a data-type="external" href="mailto:compagnie@lesmegeresdelhumus.fr?subject=Message du site">Nous écrire</a><span class="lien-e-seul"></span></span>
         </div>
         <div class="infos-contact fb">    
@@ -50,14 +50,14 @@
         </div>
         
         <div class="adresse">
-            <p><img src="<?php echo htmlspecialchars(site_path('/images/iconeAdresse.png'), ENT_QUOTES, 'UTF-8'); ?>" width="50px" alt=""></p>
+            <p><img src="<?php echo htmlspecialchars(site_path('/images/iconeAdresse.webp'), ENT_QUOTES, 'UTF-8'); ?>" width="50px" alt=""></p>
             <p>Cie LES MÉGÈRES DE L'HUMUS</p>
             <p>7 rue du 19 mars 1962</p>
             <p>11170 Moussoulens</p>
         </div>
         
         <div class="association">
-            <p><img src="<?php echo htmlspecialchars(site_path('/images/connect.png'), ENT_QUOTES, 'UTF-8'); ?>" width="40px" alt=""></p>
+            <p><img src="<?php echo htmlspecialchars(site_path('/images/connect.webp'), ENT_QUOTES, 'UTF-8'); ?>" width="40px" alt=""></p>
             <p>
                 Association loi 1901<br>
                 APE - 9001Z<br>

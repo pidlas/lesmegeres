@@ -21,30 +21,10 @@
                 <p>Delphine et Marie, elles, sont deux amoureuses de la culture et ont décidé de soutenir Sabine et Suzie en créant la 
                     structure d'accueil adaptée, l’association loi 1901 Les Mégères de l'Humus.
                 </p>
-                <picture>
-                    <!--version webp-->
-                    <source type="image/webp"
-                        srcset="
-                            <?php echo htmlspecialchars(site_path('/images/co_dossier-prez-400w.webp 400w'), ENT_QUOTES, 'UTF-8');?>,
-                            <?php echo htmlspecialchars(site_path('/images/co_dossier-prez-800w.webp 800w'), ENT_QUOTES, 'UTF-8');?>,
-                            <?php echo htmlspecialchars(site_path('/images/co_dossier-prez-1200w.webp 1200w'), ENT_QUOTES, 'UTF-8');?>"
-                        sizes="
-                            (max-width:400px) 100vw,
-                            (max-width:800px) 50vw,
-                            33vw">
-                    <!--version jpeg-->
-                        <source type="image/jpeg"
-                        srcset="
-                            <?php echo htmlspecialchars(site_path('/images/co_dossier-prez-400w.jpg 400w'), ENT_QUOTES, 'UTF-8');?>,
-                            <?php echo htmlspecialchars(site_path('/images/co_dossier-prez-800w.jpg 800w'), ENT_QUOTES, 'UTF-8');?>,
-                            <?php echo htmlspecialchars(site_path('/images/co_dossier-prez-1200w.jpg 1200w'), ENT_QUOTES, 'UTF-8');?>"
-                        sizes="
-                            (max-width:400px) 100vw,
-                            (max-width:800px) 50vw,
-                            33vw">
-                    <!--fallback-->        
-                    <img alt="Le théâtre d'ombres - Grésilhette et la Salimonde" src="<?php echo htmlspecialchars(site_path('/images/co_dossier-prez-1200w.jpg'), ENT_QUOTES, 'UTF-8');?>" loading="lazy">
-                </picture>
+                <img
+                    src="<?php echo htmlspecialchars(site_path('/images/co_dossier-prez-800w.webp'), ENT_QUOTES, 'UTF-8'); ?>"
+                    alt="Le théâtre d'ombres - Grésilhette et la Salimonde"
+                    loading="lazy">
             </div><!--fermeture balise .G_CO-ITEM1-->
         </div><!--fermeture balise .G_COMPAGNIE-->
         <div class="g_compagnie2">    
@@ -97,46 +77,22 @@
             <!--<h2 class="display-title titre-rapports">Découvrez les coulisses de notre aventure !</h2>-->
             <div class="g_co-item7">
                 <a target="_blank" rel="nopener noreferrer" href="<?php echo htmlspecialchars(site_path('/pdf/rapport-2024_compressed.pdf'), ENT_QUOTES, 'UTF-8');?>" title="Visualiser le rapport 2024">
-                    <img alt="Rapport d'activités 2024 de la compagnie Les Mégères de l'Humus" src="<?php echo htmlspecialchars(site_path('/images/rapport2024.png'), ENT_QUOTES, 'UTF-8');?>" loading="lazy">
+                    <img alt="Rapport d'activités 2024 de la compagnie Les Mégères de l'Humus" src="<?php echo htmlspecialchars(site_path('/images/rapport2024.webp'), ENT_QUOTES, 'UTF-8');?>" loading="lazy">
                 </a>
             </div><!--fermeture balise .G_CO-ITEM7-->
             <div class="g_co-item8">
                 <a target="_blank" rel="noopener noreferrer" href="<?php echo htmlspecialchars(site_path('/pdf/rapport-2025_compressed.pdf'), ENT_QUOTES, 'UTF-8');?>" title="Visualiser le rapport 2025">
-                    <img alt="Rapport d'activités 2025 de la compagnie Les Mégères de l'Humus" src="<?php echo htmlspecialchars(site_path('/images/rapport2025.png'), ENT_QUOTES, 'UTF-8');?>" loading="lazy">
+                    <img alt="Rapport d'activités 2025 de la compagnie Les Mégères de l'Humus" src="<?php echo htmlspecialchars(site_path('/images/rapport2025.webp'), ENT_QUOTES, 'UTF-8');?>" loading="lazy">
                 </a>
             </div><!--fermeture balise .G_CO-ITEM8-->
             <div class="g_co-item9">
                 <h2 class="display-title">Et pourquoi les Mégères ?</h2>
             </div><!--fermeture balise .G_CO-ITEM9-->
             <div class="g_co-item10">
-                <picture>
-                    <!--version webp-->
-                    <source type="image/webp"
-                        srcset="
-                            <?php echo htmlspecialchars(site_path('/images/co_masque-400w.webp 400w'), ENT_QUOTES, 'UTF-8');?>,
-                            <?php echo htmlspecialchars(site_path('/images/co_masque-800w.webp 800w'), ENT_QUOTES, 'UTF-8');?>,
-                            <?php echo htmlspecialchars(site_path('/images/co_masque-1200w.webp 1200w'), ENT_QUOTES, 'UTF-8');?>"
-                        sizes="
-                            (min-width:0px) 150px,
-                            (min-width:768px) 200px,
-                            (min-width:960px) 250px,
-                            (min-width:1200px) 300px,
-                            350px">
-                    <!--version jpeg-->
-                        <source type="image/jpeg"
-                        srcset="
-                            <?php echo htmlspecialchars(site_path('/images/co_masque-400w.jpg 400w'), ENT_QUOTES, 'UTF-8');?>,
-                            <?php echo htmlspecialchars(site_path('/images/co_masque-800w.jpg 800w'), ENT_QUOTES, 'UTF-8');?>,
-                            <?php echo htmlspecialchars(site_path('/images/co_masque-1200w.jpg 1200w'), ENT_QUOTES, 'UTF-8');?>"
-                        sizes="
-                            (min-width:0px) 150px,
-                            (min-width:768px) 200px,
-                            (min-width:960px) 250px,
-                            (min-width:1200px) 300px, 
-                            350px">
-                    <!--fallback-->        
-                    <img class="forme-masque" alt="Masque de Gorgone du théâtre antique" src="<?php echo htmlspecialchars(site_path('/images/co_masque-400w.jpg'), ENT_QUOTES, 'UTF-8');?>" loading="lazy">
-                </picture>
+                <img class="forme-masque"
+                    src="<?php echo htmlspecialchars(site_path('/images/co_masque-400w.webp'), ENT_QUOTES, 'UTF-8'); ?>"
+                    alt="Masque de Gorgone du théâtre antique"
+                    loading="lazy">
                 <p>
                     D’après le dictionnaire Le Robert, une mégère est “une femme méchante et criarde”. Dans le langage 
                     familier, les mégères sont des femmes qui discutent entre elles et qui alimentent les potins de leur 
@@ -154,7 +110,10 @@
                 </p>
             </div><!--fermeture balise .G_CO-ITEM10-->
             <div class="g_co-item11">
-                <img class="forme-erinyes" alt="Les Erynies, peinture moderne" src="<?php echo htmlspecialchars(site_path('/images/co_les-erynies.webp'), ENT_QUOTES, 'UTF-8');?>" loading="lazy">
+                <img class="forme-erinyes"
+                    src="<?php echo htmlspecialchars(site_path('/images/co_les-erynies-400w.webp'), ENT_QUOTES, 'UTF-8');?>"
+                    alt="Les Erynies, peinture moderne" 
+                    loading="lazy">
                 <p>Lorsque nous étions à la recherche d’une figure symbolique de femmes puissantes nous sommes revenues à 
                     notre amour premier du théâtre autour des histoires et de la mythologie. C'était important pour nous de 
                     toujours faire appel à nos racines. Nous avons alors redécouvert avec plaisir le mythe des Érinyes. Et oui ! 
@@ -171,7 +130,10 @@
             
             <div class="g_co-item12">
                 <figure>
-                    <img alt="Les Erynies et Oreste, peinture classique" src="<?php echo htmlspecialchars(site_path('/images/co_les-erinyes-et-oreste.jpg'), ENT_QUOTES, 'UTF-8');?>" loading="lazy">
+                    <img 
+                        alt="Les Erynies et Oreste, peinture classique"
+                        src="<?php echo htmlspecialchars(site_path('/images/co_les-erinyes-et-oreste-800w.webp'), ENT_QUOTES, 'UTF-8');?>"
+                        loading="lazy">
                     <figcaption class="p_centrer legende">Les Érynies poursuivent Oreste pour avoir tué Clytemnestre
                     </figcaption>
                 </figure>
@@ -192,7 +154,10 @@
                     retrouver notre humanité.
                 </p>
                 <figure>
-                    <img alt="L'humus, peinture stylisée" src="<?php echo htmlspecialchars(site_path('/images/co_l-humus.jpg'), ENT_QUOTES, 'UTF-8');?>" loading="lazy">
+                    <img 
+                        src="<?php echo htmlspecialchars(site_path('/images/co_l-humus-800w.webp'), ENT_QUOTES, 'UTF-8');?>"
+                        alt="L'humus, peinture stylisée"
+                        loading="lazy">
                     <figcaption class="p_centrer legende">
                     Emerson Munduruku est une biologiste munduruku. Elle utilise le drag, sous le nom d'Uýra Sodoma afin de militer pour la préservation de 
                     l'Amazonie.

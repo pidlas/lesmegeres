@@ -64,7 +64,7 @@
                     <!--La bulle 4 est déplacée ici : Juste après les tarifs, à la fin du flux
                     <div class="bloc-bulle-finale">
                         Utilisez UNIQUEMENT la classe "bulle-bas-centre" ici
-                        <img src="<?php echo htmlspecialchars(site_path('/images/bulle4.png'), ENT_QUOTES, 'UTF-8');?>" class="bulle-bas-centre" alt="" loading="lazy">
+                        <img src="<?php echo htmlspecialchars(site_path('/images/bulle4.webp'), ENT_QUOTES, 'UTF-8');?>" class="bulle-bas-centre" alt="" loading="lazy">
                     </div>-->
                 
                 </div><!--fermeture balise .OPPRESSION-CORPS-->

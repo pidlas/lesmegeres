@@ -9,7 +9,7 @@
 
         <article class="g_bio">
             <div class="e_photo"><!-- Élément 1 de la grille-->
-                <img class="fade-zoom" onload="this.classList.add('loaded')" src="<?php echo htmlspecialchars(site_path('/images/webRigolote_sr.jpg'), ENT_QUOTES, 'UTF-8');?>" alt="Sabine Rance, Responsable artistique, metteuse en scène, autrice, comédienne">
+                <img class="fade-zoom" onload="this.classList.add('loaded')" src="<?php echo htmlspecialchars(site_path('/images/webRigolote_sr.webp'), ENT_QUOTES, 'UTF-8');?>" alt="Sabine Rance, Responsable artistique, metteuse en scène, autrice, comédienne">
                 <p class="p_centrer"><a href="https://sabinerance.book.fr" target="_blank" rel="noopener noreferrer">sabinerance.book.fr<sup><i class="fa-solid fa-arrow-up-right-from-square fa-xs" style="color: #B197FC;"></i></sup></a></p>
             </div><!-- balise fermeture E_PHOTO-->
 

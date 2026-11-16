@@ -8,19 +8,19 @@
             
         <div class="p_theatre-d-ombres">
             <a href="<?php echo htmlspecialchars(site_path('/theatre-d-ombres'), ENT_QUOTES, 'UTF-8');?>">
-                <img src="<?php echo htmlspecialchars(site_path('/images/sp_theatre-d-ombres.png'), ENT_QUOTES, 'UTF-8');?>" width="200" alt="Le théâtre d'ombres - Grésilhette et la Salimonde">
+                <img src="<?php echo htmlspecialchars(site_path('/images/sp_theatre-d-ombres.webp'), ENT_QUOTES, 'UTF-8');?>" width="200" alt="Le théâtre d'ombres - Grésilhette et la Salimonde">
             </a>
             <a class="image-wrapper morph" href="<?php echo htmlspecialchars(site_path('/sieste-contee'), ENT_QUOTES, 'UTF-8');?>" title="Voir la sieste contée">
-                <img src="<?php echo htmlspecialchars(site_path('/images/sp_sieste-contee.png'), ENT_QUOTES, 'UTF-8');?>" width="200" alt="La sieste contée - Grésilhette et la Salimonde">
+                <img src="<?php echo htmlspecialchars(site_path('/images/sp_sieste-contee.webp'), ENT_QUOTES, 'UTF-8');?>" width="200" alt="La sieste contée - Grésilhette et la Salimonde">
             </a>
             <a class="image-wrapper morph" href="<?php echo htmlspecialchars(site_path('/projet-pedagogique'), ENT_QUOTES, 'UTF-8');?>" title="Voir le projet pédagogique">
-                <img src="<?php echo htmlspecialchars(site_path('/images/sp_projet-pedagogique.png'), ENT_QUOTES, 'UTF-8');?>" width="200" alt="Le projet pédagogique - Grésilhette et la Salimonde">
+                <img src="<?php echo htmlspecialchars(site_path('/images/sp_projet-pedagogique.webp'), ENT_QUOTES, 'UTF-8');?>" width="200" alt="Le projet pédagogique - Grésilhette et la Salimonde">
             </a>
         </div><!--fermeture balise P_THEATRE-D-OMBRES-->
        
         <div class="montage-wrapper">
             <h2 class="display-title">Nos sources d'inspiration</h2>
-            <img class="forme-montage" alt="Photos donnant de l'inspiration" src="<?php echo htmlspecialchars(site_path('/images/montage-inspiration.jpg'), ENT_QUOTES, 'UTF-8');?>" loading="lazy">
+            <img class="forme-montage" alt="Photos donnant de l'inspiration" src="<?php echo htmlspecialchars(site_path('/images/montage-inspiration.webp'), ENT_QUOTES, 'UTF-8');?>" loading="lazy">
             <p>
                 Pendant notre enfance, notre adolescence et notre vie de jeunes adultes nous nous 
                 sommes rendu&middot;e&middot;s compte que nous avions des références communes dans plusieurs 
@@ -56,7 +56,7 @@
         <p>Voir ci-dessous la fiche technique.</p>
         <div class="g_art-tech">
             <a target="_blank" rel="noopener noreferrer" href="<?php echo htmlspecialchars(site_path('/pdf/fiche-theatre-d-ombres.pdf'), ENT_QUOTES, 'UTF-8');?>" title="Visualiser la fiche technique théâtre d'ombres">
-                <img alt="Fiche technique théâtre d'ombres de la compagnie Les Mégères de l'Humus" src="<?php echo htmlspecialchars(site_path('/images/btn-tech-ombres.jpg'), ENT_QUOTES, 'UTF-8');?>" width="300" loading="lazy">
+                <img alt="Fiche technique théâtre d'ombres de la compagnie Les Mégères de l'Humus" src="<?php echo htmlspecialchars(site_path('/images/btn-tech-ombres.webp'), ENT_QUOTES, 'UTF-8');?>" width="300" loading="lazy">
             </a>
         </div>
         <div class="conteneur-feuilles">

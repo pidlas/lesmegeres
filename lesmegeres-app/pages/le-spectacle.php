@@ -9,8 +9,8 @@
       <h1>Le spectacle : 0'Pression</h1>
       <h3 class="coco p_centrer">Spectacle de Théâtre Forum - 1h45</h3>
       <div class="img-centre">
-          <img class="photo-stages-ateliers" alt="Scène du Théâtre Forum" src="<?php echo htmlspecialchars(site_path('/images/theatre-forum-2.jpg'), ENT_QUOTES, 'UTF-8');?>" loading="lazy">
-          <img class="photo-stages-ateliers" alt="Scène du Théâtre Forum" src="<?php echo htmlspecialchars(site_path('/images/theatre-forum-3.jpg'), ENT_QUOTES, 'UTF-8');?>" loading="lazy">
+          <img class="photo-stages-ateliers" alt="Scène du Théâtre Forum" src="<?php echo htmlspecialchars(site_path('/images/theatre-forum-2.webp'), ENT_QUOTES, 'UTF-8');?>" loading="lazy">
+          <img class="photo-stages-ateliers" alt="Scène du Théâtre Forum" src="<?php echo htmlspecialchars(site_path('/images/theatre-forum-3.webp'), ENT_QUOTES, 'UTF-8');?>" loading="lazy">
       </div><!-- fermeture balise IMG-CENTRE -->
 
       <p class="versions-spectacle">

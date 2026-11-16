@@ -261,7 +261,7 @@
             '@id' => $sitePublicBaseUrl . '/#organization',
             'name' => $siteName,
             'url' => $sitePublicBaseUrl,
-            'logo' => $sitePublicBaseUrl . '/images/logohumous-notext-blue.png',
+            'logo' => $sitePublicBaseUrl . '/images/logohumous-notext-blue.webp',
             'email' => 'compagnie@lesmegeresdelhumus.fr',
             'sameAs' => [
               'https://www.facebook.com/people/Cie-Les-M%C3%A9g%C3%A8res-de-lHumus/100093667065923/',
@@ -307,7 +307,7 @@
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="<?php echo $pageTitleOutput; ?>">
     <meta name="twitter:description" content="<?php echo $metaDescriptionOutput; ?>">
-    <meta name="twitter:image" content="<?php echo htmlspecialchars($sitePublicBaseUrl . '/images/logohumous-notext-blue.png', ENT_QUOTES, 'UTF-8'); ?>">
+    <meta name="twitter:image" content="<?php echo htmlspecialchars($sitePublicBaseUrl . '/images/logohumous-notext-blue.webp', ENT_QUOTES, 'UTF-8'); ?>">
     
     <link href="<?php echo htmlspecialchars(site_path('/css/style.min.css'), ENT_QUOTES, 'UTF-8'); ?>?v=20260410b" rel="stylesheet">
     <!--<link href="<?php echo htmlspecialchars(site_path('/css/style.css'), ENT_QUOTES, 'UTF-8'); ?>?v=20260410b" rel="stylesheet">-->
@@ -331,7 +331,7 @@
     <header>
         <div class="morph logo">
           <a href="<?php echo htmlspecialchars(site_path('/'), ENT_QUOTES, 'UTF-8'); ?>">
-            <img src="<?php echo htmlspecialchars(site_path('/images/logohumous-notext-blue.png'), ENT_QUOTES, 'UTF-8'); ?>" width="230" height="230" alt="Le logo des Mégères de l'Humus réalisé par Noam"/>
+            <img src="<?php echo htmlspecialchars(site_path('/images/logohumous-notext-blue.webp'), ENT_QUOTES, 'UTF-8'); ?>" width="230" height="230" alt="Le logo des Mégères de l'Humus réalisé par Noam"/>
           </a>
           </div>
       <div class="e_titre">

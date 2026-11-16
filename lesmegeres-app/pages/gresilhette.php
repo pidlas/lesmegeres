@@ -55,13 +55,13 @@
                     </p>
                     <p class="versions-spectacle">
                         <a class="images-spectacle morph" href="<?php echo htmlspecialchars(site_path('/theatre-d-ombres'), ENT_QUOTES, 'UTF-8');?>">
-                            <img src="<?php echo htmlspecialchars(site_path('/images/sp_theatre-d-ombres.png'), ENT_QUOTES, 'UTF-8');?>" width="200" alt="Le théâtre d'ombres - Grésilhette et la Salimonde">
+                            <img src="<?php echo htmlspecialchars(site_path('/images/sp_theatre-d-ombres.webp'), ENT_QUOTES, 'UTF-8');?>" width="200" alt="Le théâtre d'ombres - Grésilhette et la Salimonde">
                         </a>
                         <a class="images-spectacle morph" href="<?php echo htmlspecialchars(site_path('/sieste-contee'), ENT_QUOTES, 'UTF-8');?>">
-                            <img src="<?php echo htmlspecialchars(site_path('/images/sp_sieste-contee.png'), ENT_QUOTES, 'UTF-8');?>" width="200" alt="La sieste contée - Grésilhette et la Salimonde">
+                            <img src="<?php echo htmlspecialchars(site_path('/images/sp_sieste-contee.webp'), ENT_QUOTES, 'UTF-8');?>" width="200" alt="La sieste contée - Grésilhette et la Salimonde">
                         </a>
                         <a class="images-spectacle morph" href="<?php echo htmlspecialchars(site_path('/projet-pedagogique'), ENT_QUOTES, 'UTF-8');?>">
-                            <img src="<?php echo htmlspecialchars(site_path('/images/sp_projet-pedagogique.png'), ENT_QUOTES, 'UTF-8');?>" width="200" alt="Le projet pédagogique - Grésilhette et la Salimonde">
+                            <img src="<?php echo htmlspecialchars(site_path('/images/sp_projet-pedagogique.webp'), ENT_QUOTES, 'UTF-8');?>" width="200" alt="Le projet pédagogique - Grésilhette et la Salimonde">
                         </a>
                     </p>
                     <p>Ce conte s’inspire de la légende de la Salimonde&nbsp;:&nbsp; sorcière de la Montagne Noire qui vit dans une grotte. Une fois par an, au milieu de l'hiver, tout le monde l’entend.
@@ -76,7 +76,7 @@
                     </p>
                     <p>
                         <a target="_blank" rel="noopener noreferrer" href="<?php echo htmlspecialchars(site_path('/pdf/dossier-prez_compressed.pdf'), ENT_QUOTES, 'UTF-8');?>" title="Visualiser le dossier artistique Grésilhette et la Salimonde de la compagnie Les Mégères de l'Humus">
-                            <img alt="Dossier artistique Grésilhette et la Salimonde de la compagnie Les Mégères de l'Humus" src="<?php echo htmlspecialchars(site_path('/images/btn-prez.jpg'), ENT_QUOTES, 'UTF-8');?>" width="300" height="66" loading="lazy">
+                            <img alt="Dossier artistique Grésilhette et la Salimonde de la compagnie Les Mégères de l'Humus" src="<?php echo htmlspecialchars(site_path('/images/btn-prez.webp'), ENT_QUOTES, 'UTF-8');?>" width="300" height="66" loading="lazy">
                         </a>
                     </p>
                     <p class="p_terra g_sp_e-generique">

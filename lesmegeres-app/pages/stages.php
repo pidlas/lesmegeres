@@ -7,10 +7,7 @@
         </div><!--fermeture balise .CONTENEUR-CHAMPIGNONS-->
         <div>
             <div class="img-centre">
-                <picture>
-                    <source srcset="<?php echo htmlspecialchars(site_path('/images/stages.webp'), ENT_QUOTES, 'UTF-8');?>" type="image/webp">
-                    <img class="photo-stages-ateliers" src="<?php echo htmlspecialchars(site_path('/images/stages.jpg'), ENT_QUOTES, 'UTF-8');?>" alt="Un stage de théâtre de la Compagnie Les Mégères de l'Humus" loading="lazy">
-                </picture>
+                <img class="photo-stages-ateliers" src="<?php echo htmlspecialchars(site_path('/images/stages.webp'), ENT_QUOTES, 'UTF-8');?>" alt="Un stage de théâtre de la Compagnie Les Mégères de l'Humus" loading="lazy">
             </div>
             <p>Ces stages sont pensés pour progresser en confiance, découvrir différents langages scéniques et vivre une aventure collective. La compagnie 
                 intervient auprès de publics débutants ou déjà pratiquants. Pour connaître les prochaines dates, les lieux d'accueil et les modalités 
@@ -19,14 +16,8 @@
             </p>
         </div>
         <div class="img-centre">
-            <picture>
-                <source srcset="<?php echo htmlspecialchars(site_path('/images/les-stages-recto.webp'), ENT_QUOTES, 'UTF-8');?>" type="image/webp">
-                <img class="affiche-stage" src="<?php echo htmlspecialchars(site_path('/images/les-stages-recto.jpg'), ENT_QUOTES, 'UTF-8');?>" alt="Le tarif des stages de théâtre" loading="lazy">
-            </picture>
-            <picture>
-                <source srcset="<?php echo htmlspecialchars(site_path('/images/les-stages-verso.webp'), ENT_QUOTES, 'UTF-8');?>" type="image/webp">
-                <img class="affiche-stage" src="<?php echo htmlspecialchars(site_path('/images/les-stages-verso.jpg'), ENT_QUOTES, 'UTF-8');?>" alt="Les objectifs pédagogiques des stages de théâtre" loading="lazy">
-            </picture>
+            <img class="affiche-stage" src="<?php echo htmlspecialchars(site_path('/images/les-stages-recto.webp'), ENT_QUOTES, 'UTF-8');?>" alt="Le tarif des stages de théâtre" loading="lazy">
+            <img class="affiche-stage" src="<?php echo htmlspecialchars(site_path('/images/les-stages-verso.webp'), ENT_QUOTES, 'UTF-8');?>" alt="Les objectifs pédagogiques des stages de théâtre" loading="lazy">
         </div>
 
         <div class="conteneur-feuilles">

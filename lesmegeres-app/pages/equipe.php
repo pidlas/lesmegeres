@@ -12,7 +12,7 @@
                     <div class="anime_hover">
                         <p class="montre coco">Plus sur Suzie</p>
                         <a href="<?php echo htmlspecialchars(site_path('/suzie'), ENT_QUOTES, 'UTF-8');?>">
-                            <img alt="Suzie Idlas, la responsable communication" src="<?php echo htmlspecialchars(site_path('/images/webJolie_si.jpg'), ENT_QUOTES, 'UTF-8');?>">
+                            <img alt="Suzie Idlas, la responsable communication" src="<?php echo htmlspecialchars(site_path('/images/webJolie_si.webp'), ENT_QUOTES, 'UTF-8');?>">
                         </a>
                     </div>
                 </li>
@@ -20,7 +20,7 @@
                     <div class="anime_hover">
                         <p class="montre coco">Plus sur Sabine</p>
                         <a href="<?php echo htmlspecialchars(site_path('/sabine'), ENT_QUOTES, 'UTF-8');?>">
-                            <img alt="Sabine Rance, la responsable artistique" src="<?php echo htmlspecialchars(site_path('/images/webJolie_sr.jpg'), ENT_QUOTES, 'UTF-8');?>">
+                            <img alt="Sabine Rance, la responsable artistique" src="<?php echo htmlspecialchars(site_path('/images/webJolie_sr.webp'), ENT_QUOTES, 'UTF-8');?>">
                         </a>
                     </div>
                 </li>
@@ -32,7 +32,7 @@
                     <div class="anime_hover posImage">
                         <p class="montre coco">Plus sur Estelle</p>
                             <a href="<?php echo htmlspecialchars(site_path('/muriel'), ENT_QUOTES, 'UTF-8');?>">
-                                <img alt="Muriel Lamy, comédienne" src="<?php echo htmlspecialchars(site_path('/images/webJolie_ml.jpg'), ENT_QUOTES, 'UTF-8');?>" loading="lazy">
+                                <img alt="Muriel Lamy, comédienne" src="<?php echo htmlspecialchars(site_path('/images/webJolie_ml.webp'), ENT_QUOTES, 'UTF-8');?>" loading="lazy">
                             </a>
                     </div>
                 </li>
@@ -40,7 +40,7 @@
                     <div class="anime_hover">
                         <p class="montre coco">Plus sur Anne</p>
                         <a href="<?php echo htmlspecialchars(site_path('/anne'), ENT_QUOTES, 'UTF-8');?>">
-                            <img alt="Anne Spielmann, plasticienne" src="<?php echo htmlspecialchars(site_path('/images/webJolie_as.jpg'), ENT_QUOTES, 'UTF-8');?>" loading="lazy">
+                            <img alt="Anne Spielmann, plasticienne" src="<?php echo htmlspecialchars(site_path('/images/webJolie_as.webp'), ENT_QUOTES, 'UTF-8');?>" loading="lazy">
                         </a>
                     </div>
                 </li>
@@ -52,7 +52,7 @@
                     <div class="anime_hover">
                         <p class="montre coco">Plus sur Delphine</p>
                         <a href="<?php echo htmlspecialchars(site_path('/delphine'), ENT_QUOTES, 'UTF-8');?>">
-                            <img alt="Delphine Verniol, la présidente" src="<?php echo htmlspecialchars(site_path('/images/webJolie_dv.jpg'), ENT_QUOTES, 'UTF-8');?>" loading="lazy">
+                            <img alt="Delphine Verniol, la présidente" src="<?php echo htmlspecialchars(site_path('/images/webJolie_dv.webp'), ENT_QUOTES, 'UTF-8');?>" loading="lazy">
                         </a>
                     </div>
                 </li>
@@ -60,7 +60,7 @@
                     <div class="anime_hover">
                         <p class="montre coco">Plus sur Marie</p>
                         <a href="<?php echo htmlspecialchars(site_path('/marie'), ENT_QUOTES, 'UTF-8');?>">
-                            <img alt="Marie Diel, la trésorière" src="<?php echo htmlspecialchars(site_path('/images/webJolie_md.jpg'), ENT_QUOTES, 'UTF-8');?>" loading="lazy">
+                            <img alt="Marie Diel, la trésorière" src="<?php echo htmlspecialchars(site_path('/images/webJolie_md.webp'), ENT_QUOTES, 'UTF-8');?>" loading="lazy">
                         </a>
                     </div>
                 </li>
@@ -68,7 +68,7 @@
                     <div class="anime_hover">
                         <p class="montre coco">Plus sur Juliette</p>
                         <a href="<?php echo htmlspecialchars(site_path('/juliette'), ENT_QUOTES, 'UTF-8');?>">
-                            <img alt="Juliette Gaubert, la graphiste" src="<?php echo htmlspecialchars(site_path('/images/webJolie_jg.jpg'), ENT_QUOTES, 'UTF-8');?>" loading="lazy">
+                            <img alt="Juliette Gaubert, la graphiste" src="<?php echo htmlspecialchars(site_path('/images/webJolie_jg.webp'), ENT_QUOTES, 'UTF-8');?>" loading="lazy">
                         </a>
                     </div>
                 </li>
@@ -76,7 +76,7 @@
                     <div class="anime_hover">
                         <p class="montre coco">Plus sur Philippe</p>
                         <a href="<?php echo htmlspecialchars(site_path('/philippe'), ENT_QUOTES, 'UTF-8');?>">
-                            <img alt="Philippe Guerrini, l'informaticien" src="<?php echo htmlspecialchars(site_path('/images/webJolie_pi.jpg'), ENT_QUOTES, 'UTF-8');?>" loading="lazy">
+                            <img alt="Philippe Guerrini, l'informaticien" src="<?php echo htmlspecialchars(site_path('/images/webJolie_pi.webp'), ENT_QUOTES, 'UTF-8');?>" loading="lazy">
                         </a>
                     </div>
                 </li>

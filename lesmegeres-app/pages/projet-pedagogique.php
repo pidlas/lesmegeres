@@ -7,13 +7,13 @@
         </div><!--fermeture balise .CONTENEUR-CHAMPIGNONS-->
         <div class="p_projet-pedagogique">
             <a class="image-wrapper morph" href="<?php echo htmlspecialchars(site_path('/theatre-d-ombres'), ENT_QUOTES, 'UTF-8');?>">
-                <img src="<?php echo htmlspecialchars(site_path('/images/sp_theatre-d-ombres.png'), ENT_QUOTES, 'UTF-8');?>" width="200" alt="Le théâtre d'ombres - Grésilhette et la Salimonde">
+                <img src="<?php echo htmlspecialchars(site_path('/images/sp_theatre-d-ombres.webp'), ENT_QUOTES, 'UTF-8');?>" width="200" alt="Le théâtre d'ombres - Grésilhette et la Salimonde">
             </a>
             <a class="image-wrapper morph" href="<?php echo htmlspecialchars(site_path('/sieste-contee'), ENT_QUOTES, 'UTF-8');?>" title="Voir la sieste contée">
-                <img src="<?php echo htmlspecialchars(site_path('/images/sp_sieste-contee.png'), ENT_QUOTES, 'UTF-8');?>" width="200" alt="La sieste contée - Grésilhette et la Salimonde">
+                <img src="<?php echo htmlspecialchars(site_path('/images/sp_sieste-contee.webp'), ENT_QUOTES, 'UTF-8');?>" width="200" alt="La sieste contée - Grésilhette et la Salimonde">
             </a>
             <a href="<?php echo htmlspecialchars(site_path('/projet-pedagogique'), ENT_QUOTES, 'UTF-8');?>" title="Voir le projet pédagogique">
-                <img src="<?php echo htmlspecialchars(site_path('/images/sp_projet-pedagogique.png'), ENT_QUOTES, 'UTF-8');?>" width="200" alt="Le projet pédagogique - Grésilhette et la Salimonde">
+                <img src="<?php echo htmlspecialchars(site_path('/images/sp_projet-pedagogique.webp'), ENT_QUOTES, 'UTF-8');?>" width="200" alt="Le projet pédagogique - Grésilhette et la Salimonde">
             </a>
         </div><!--fermeture balise P_PROJET-PEDAGOGIQUE-->
         <p>
@@ -28,7 +28,7 @@
         </p>
         <div class="g_art-tech"> 
             <a href="#" title="Visualiser la fiche technique Projet pédagogique">
-                <img alt="Fiche technique Projet Pédagogique de la compagnie Les Mégères de l'Humus" src="<?php echo htmlspecialchars(site_path('/images/btn-tech-projets.jpg'), ENT_QUOTES, 'UTF-8');?>" width="300" loading="lazy">
+                <img alt="Fiche technique Projet Pédagogique de la compagnie Les Mégères de l'Humus" src="<?php echo htmlspecialchars(site_path('/images/btn-tech-projets.webp'), ENT_QUOTES, 'UTF-8');?>" width="300" loading="lazy">
             </a>
         </div>
         <div class="conteneur-feuilles">

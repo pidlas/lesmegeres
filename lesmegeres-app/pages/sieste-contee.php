@@ -8,13 +8,13 @@
 
         <div class="p_sieste-contee">
             <a class="image-wrapper morph" href="<?php echo htmlspecialchars(site_path('/theatre-d-ombres'), ENT_QUOTES, 'UTF-8');?>">
-                <img src="<?php echo htmlspecialchars(site_path('/images/sp_theatre-d-ombres.png'), ENT_QUOTES, 'UTF-8');?>" width="200" alt="Le théâtre d'ombres - Grésilhette et la Salimonde">
+                <img src="<?php echo htmlspecialchars(site_path('/images/sp_theatre-d-ombres.webp'), ENT_QUOTES, 'UTF-8');?>" width="200" alt="Le théâtre d'ombres - Grésilhette et la Salimonde">
             </a>
             <a href="<?php echo htmlspecialchars(site_path('/sieste-contee'), ENT_QUOTES, 'UTF-8');?>" title="Voir la sieste contée">
-                <img src="<?php echo htmlspecialchars(site_path('/images/sp_sieste-contee.png'), ENT_QUOTES, 'UTF-8');?>" width="200" alt="La sieste contée - Grésilhette et la Salimonde">
+                <img src="<?php echo htmlspecialchars(site_path('/images/sp_sieste-contee.webp'), ENT_QUOTES, 'UTF-8');?>" width="200" alt="La sieste contée - Grésilhette et la Salimonde">
             </a>
             <a class="image-wrapper morph" href="<?php echo htmlspecialchars(site_path('/projet-pedagogique'), ENT_QUOTES, 'UTF-8');?>" title="Voir le projet pédagogique">
-                <img src="<?php echo htmlspecialchars(site_path('/images/sp_projet-pedagogique.png'), ENT_QUOTES, 'UTF-8');?>" width="200" alt="Le projet pédagogique - Grésilhette et la Salimonde">
+                <img src="<?php echo htmlspecialchars(site_path('/images/sp_projet-pedagogique.webp'), ENT_QUOTES, 'UTF-8');?>" width="200" alt="Le projet pédagogique - Grésilhette et la Salimonde">
             </a>
         </div><!--fermeture balise P_SIESTE-CONTEE-->
         <p>La sieste contée propose une expérience douce, sensible et immersive à 
@@ -26,33 +26,13 @@
             sur le territoire audois et en Occitanie et plus largement. Pour organiser une séance adaptée 
             à votre public, vous pouvez nous <a data-type="external" href="mailto:compagnie@lesmegeresdelhumus.fr?subject=Message du site, page Sieste Contée">écrire</a><span class="lien-e-seul"></span>.
         </p>
-        <picture>
-            <!--version webp-->
-            <source type="image/webp"
-                srcset="
-                    <?php echo htmlspecialchars(site_path('/images/sigean-400w.webp 400w'), ENT_QUOTES, 'UTF-8');?>,
-                    <?php echo htmlspecialchars(site_path('/images/sigean-800w.webp 800w'), ENT_QUOTES, 'UTF-8');?>,
-                    <?php echo htmlspecialchars(site_path('/images/sigean-1200w.webp 1200w'), ENT_QUOTES, 'UTF-8');?>"
-                sizes="
-                    (max-width:400px) 33vw,
-                    (max-width:800px) 50vw,
-                    100vw">
-            <!--version jpeg-->
-            <source type="image/jpeg"
-                srcset="
-                    <?php echo htmlspecialchars(site_path('/images/sigean-400w.jpg 400w'), ENT_QUOTES, 'UTF-8');?>,
-                    <?php echo htmlspecialchars(site_path('/images/sigean-800w.jpg 800w'), ENT_QUOTES, 'UTF-8');?>,
-                    <?php echo htmlspecialchars(site_path('/images/sigean-1200w.jpg 1200w'), ENT_QUOTES, 'UTF-8');?>"
-                sizes="
-                    (max-width:400px) 33vw,
-                    (max-width:800px) 50vw,
-                    100vw">
-            <!--fallback-->        
-            <img class="sigean-sieste-contee" alt="Le théâtre d'ombres - Grésilhette et la Salimonde" src="<?php echo htmlspecialchars(site_path('/images/sigean-1200w.jpg'), ENT_QUOTES, 'UTF-8');?>" loading="lazy">
-        </picture>
+            <img class="sigean-sieste-contee"
+                src="<?php echo htmlspecialchars(site_path('/images/sigean-800w.webp'), ENT_QUOTES, 'UTF-8');?>"
+                alt=""
+                loading="lazy">
         <div class="g_art-tech"> 
             <a target="_blank" rel="noopener noreferrer" href="<?php echo htmlspecialchars(site_path('/pdf/fiche-sieste-contee.pdf'), ENT_QUOTES, 'UTF-8');?>" title="Visualiser la fiche technique Sieste Contée">
-                <img alt="Fiche technique Sieste Contée de la compagnie Les Mégères de l'Humus" src="<?php echo htmlspecialchars(site_path('/images/btn-tech-sieste.jpg'), ENT_QUOTES, 'UTF-8');?>" width="300" loading="lazy">
+                <img alt="Fiche technique Sieste Contée de la compagnie Les Mégères de l'Humus" src="<?php echo htmlspecialchars(site_path('/images/btn-tech-sieste.webp'), ENT_QUOTES, 'UTF-8');?>" width="300" loading="lazy">
             </a>
         </div>
         <div class="conteneur-feuilles">

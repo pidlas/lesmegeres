@@ -42,7 +42,7 @@ h4{
 }
 h1,
 h2,
-h2{
+h3{
     font-variant-caps:all-petite-caps;
 }
 h1 {
@@ -51,17 +51,17 @@ h1 {
     text-align: center;
     margin-top: var(--space-m);
 }
-h2 {
+h2{
     font-size: clamp(0.75rem, 2vw + 0.5rem, 1.5rem);
     line-height: 1.3;
     margin-top:0;
 }
-h3 {
+h3{
     font-size: clamp(0.5rem, 1vw + 0.7rem, 1.4rem);
     line-height: 1.4;
     margin-top: var(--space-m);
 }
-h4 {
+h4{
     margin-top:0;
 }
 .e_debut_bio h1 {
@@ -983,6 +983,9 @@ figure.bio {
     justify-content:center;
     gap:20px;
 }
+.image-ronde{
+    width:12.5rem;
+}
 .images-spectacle,
 .versions-spectacle + p {
     margin-top: var(--space-m);
@@ -1302,6 +1305,16 @@ footer p {
     padding: 0.625rem;
     width: 80%;
 }
+.reglement-interieur p {
+    border-left: 0.75rem solid var(--color-brand-accent);
+    border-radius: 0.5rem;
+    margin-bottom: 2rem;
+    padding-left: 1.875rem;
+}
+.reglement-interieur h2:nth-of-type(4) + p {
+    border-left-color: var(--color-border-alizarine);
+    background-color: var(--color-highlight-alizarine);
+}
 .contact p {
     text-align: center;
 }
@@ -1616,7 +1629,6 @@ th.sep {
         border-bottom-left-radius: 0;
     }
 
-
     /* 3. LES SOUS-MENUS : Cachés par défaut, ils ne s'ouvrent qu'au survol */
     .navbar .niv1 {
         display: none; 
@@ -1825,7 +1837,7 @@ th.sep {
     }
     .images-spectacle:after,
     footer {
-        grid-template-columns: repeat(5, minmax(0, 1fr));
+        grid-template-columns: repeat(4, minmax(0, 1fr));
         justify-content: space-evenly;
     }
     /* ADDITION : Le correctif pour la barre de contrôle de la vidéo */

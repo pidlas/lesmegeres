@@ -9,7 +9,7 @@
 
         <article class="g_bio">
             <div class="e_photo"><!-- Élément 1 de la grille-->
-                <img class="fade-zoom" onload="this.classList.add('loaded')" src="<?php echo htmlspecialchars(site_path('/images/webRigolote_ml.jpg'), ENT_QUOTES, 'UTF-8');?>" alt="Muriel Lamy, comédienne">
+                <img class="fade-zoom" onload="this.classList.add('loaded')" src="<?php echo htmlspecialchars(site_path('/images/webRigolote_ml.webp'), ENT_QUOTES, 'UTF-8');?>" alt="Muriel Lamy, comédienne">
             </div><!-- balise fermeture E_PHOTO-->
 
             <div class="e_debut_bio"><!--Élément 2 de la grille-->
