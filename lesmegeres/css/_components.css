@@ -1515,6 +1515,7 @@ th.sep {
     }
     .versions-spectacle {
         flex-direction:row;
+        gap:40px;
     }
     .versions-spectacle + p {
         margin-top:0;
