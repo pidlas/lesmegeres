@@ -219,13 +219,11 @@ img {
         transform 1.1s cubic-bezier(0.22, 1, 0.36, 1);
     width: clamp(5.6rem, 18vw, 6.5rem);
     will-change: transform, border-radius;
-
 }
 .morph.logo:hover img {
     border-radius: 42% 58% 70% 30% / 45% 45% 55% 55%;
     transform: rotate(360deg) scale(1.06);
 }
-
 @media (hover: none) and (pointer: coarse) {
     .morph.logo:hover img {
         transform: none;
@@ -1018,9 +1016,10 @@ figure.bio {
 .p_theatre-d-ombres {
     display:flex;
     position:relative;
-    align-items: flex-end;
+    align-items: center;
     justify-content: center;
     margin-top: var(--space-l);
+    gap:40px;
 }
 .sigean-sieste-contee{
     display:block;
@@ -1054,16 +1053,16 @@ figure.bio {
     filter: grayscale(0) blur(0);
     height: auto;
     object-fit: cover;
-    transition: all 0.5s ease;
+    transform: rotate(0deg) scale(1);
+    transition: transform 0.8s cubic-bezier(0.22, 1, 0.36, 1);
     width: 10rem;
+    will-change: transform;
 }
 .image-wrapper.morph:hover img,
 .images-spectacle.morph:hover img{
-    aspect-ratio: 1/1;
-    border-radius: 50%;
-    height: auto;
-    transform: rotate(1turn);
-    width: 12.5rem;
+    position: relative;
+    transform: rotate(1turn) scale(1.25);
+    z-index: 10;
 }
 .image-wrapper:after {
     bottom: 0.625rem;
@@ -1168,7 +1167,6 @@ footer p {
     align-items: center;
     background-color: var(--color-brand-primary);
     border-radius: 1rem;
-    margin-top: 1rem;
     padding: 0 0.625rem;
     flex-direction: row;
     gap: 0.5rem;
@@ -1204,11 +1202,11 @@ footer p {
 .encadre-extrait:before,
 .encadre-lenga:before,
 .encadre:before {
-    background-image: url(../images/livre-blanc-fleur-remplie.png);
-    background-image: image-set(
+    background-image: url(../images/livre-blanc-fleur-remplie.webp);
+    /*background-image: image-set(
         url(../images/livre-blanc-fleur-remplie.webp) type("image/webp"),
         url(../images/livre-blanc-fleur-remplie.png) type("image/png")
-    );
+    );*/
     background-position: 50%;
     background-repeat: no-repeat;
     background-size: 110% 150%;
@@ -1225,7 +1223,7 @@ footer p {
 .gresilhette-et-la-salimonde {
     position:relative;
     align-items: center;
-    background-color: var(--color-sacred-white);
+    background-color: var(--color-whitesmoke);
     display: flex;
     flex-direction: column;
     padding: 1.25rem;
